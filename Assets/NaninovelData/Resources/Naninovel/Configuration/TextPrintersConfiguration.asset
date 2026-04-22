@@ -1,0 +1,257 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610509a41f8e448419a7e1a6122c05c0, type: 3}
+  m_Name: TextPrintersConfiguration
+  m_EditorClassIdentifier: Elringus.Naninovel.Runtime::Naninovel.TextPrintersConfiguration
+  DefaultDuration: 0.35
+  DefaultEasing: 0
+  AutoShowOnModify: 0
+  SceneOrigin: {x: 0.5, y: 0}
+  ZOffset: 0
+  ZStep: 0
+  DefaultPrinterId: Dialogue
+  DefaultBaseRevealSpeed: 0.5
+  DefaultBaseAutoDelay: 0.5
+  MaxRevealDelay: 0.06
+  MaxAutoWaitDelay: 0.02
+  ScaleAutoWait: 1
+  SkipPrintDelay: 0
+  DefaultMetadata:
+    Implementation: Naninovel.UITextPrinter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    Loader:
+      PathPrefix: TextPrinters
+      ProviderTypes:
+      - Naninovel.AddressableResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      - Naninovel.ProjectResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    guid: 5fe3194c-ab44-416d-91ff-06a5cf32d4e1
+    customData:
+      rid: -2
+    Pivot: {x: 0.5, y: 0.5}
+    PixelsPerUnit: 100
+    FilterMode: 2
+    EnableDepthPass: 1
+    DepthAlphaCutoff: 0.5
+    CustomTextureMaterial: {fileID: 0}
+    CustomSpriteMaterial: {fileID: 0}
+    RenderTexture: {fileID: 0}
+    RenderRectangle:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    AutoReset: 1
+    AutoDefault: 1
+    AutoWait: 1
+    WaitAfterRevealSkip: 1
+    AddToBacklog: 1
+    StopVoice: 0
+    ChangeVisibilityDuration: 0.3
+    WaitVisibilityBeforePrint: 0
+    PrintFrameDelay: 1
+    RevealInstantly: 0
+  Metadata:
+    ids:
+    - Dialogue
+    - Fullscreen
+    - Wide
+    - Chat
+    - Bubble
+    metas:
+    - Implementation: Naninovel.UITextPrinter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      Loader:
+        PathPrefix: TextPrinters
+        ProviderTypes:
+        - Naninovel.AddressableResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        - Naninovel.ProjectResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      guid: 2629cad3-b915-42a4-8cce-ce1200e6904a
+      customData:
+        rid: -2
+      Pivot: {x: 0.5, y: 0.5}
+      PixelsPerUnit: 100
+      FilterMode: 2
+      EnableDepthPass: 1
+      DepthAlphaCutoff: 0.5
+      CustomTextureMaterial: {fileID: 0}
+      CustomSpriteMaterial: {fileID: 0}
+      RenderTexture: {fileID: 0}
+      RenderRectangle:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 1
+      AutoReset: 1
+      AutoDefault: 1
+      AutoWait: 1
+      WaitAfterRevealSkip: 1
+      AddToBacklog: 1
+      StopVoice: 0
+      ChangeVisibilityDuration: 0.3
+      WaitVisibilityBeforePrint: 0
+      PrintFrameDelay: 1
+      RevealInstantly: 0
+    - Implementation: Naninovel.UITextPrinter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      Loader:
+        PathPrefix: TextPrinters
+        ProviderTypes:
+        - Naninovel.AddressableResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        - Naninovel.ProjectResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      guid: 3e2341a8-59e2-449c-82a8-ea90989b838a
+      customData:
+        rid: -2
+      Pivot: {x: 0.5, y: 0.5}
+      PixelsPerUnit: 100
+      FilterMode: 2
+      EnableDepthPass: 1
+      DepthAlphaCutoff: 0.5
+      CustomTextureMaterial: {fileID: 0}
+      CustomSpriteMaterial: {fileID: 0}
+      RenderTexture: {fileID: 0}
+      RenderRectangle:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 1
+      AutoReset: 0
+      AutoDefault: 1
+      AutoWait: 1
+      WaitAfterRevealSkip: 1
+      AddToBacklog: 1
+      StopVoice: 0
+      ChangeVisibilityDuration: 0.3
+      WaitVisibilityBeforePrint: 0
+      PrintFrameDelay: 1
+      RevealInstantly: 0
+    - Implementation: Naninovel.UITextPrinter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      Loader:
+        PathPrefix: TextPrinters
+        ProviderTypes:
+        - Naninovel.AddressableResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        - Naninovel.ProjectResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      guid: bc60e7cc-61d4-4364-8544-8a78d1b46b9e
+      customData:
+        rid: -2
+      Pivot: {x: 0.5, y: 0.5}
+      PixelsPerUnit: 100
+      FilterMode: 2
+      EnableDepthPass: 1
+      DepthAlphaCutoff: 0.5
+      CustomTextureMaterial: {fileID: 0}
+      CustomSpriteMaterial: {fileID: 0}
+      RenderTexture: {fileID: 0}
+      RenderRectangle:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 1
+      AutoReset: 1
+      AutoDefault: 1
+      AutoWait: 1
+      WaitAfterRevealSkip: 1
+      AddToBacklog: 1
+      StopVoice: 0
+      ChangeVisibilityDuration: 0.3
+      WaitVisibilityBeforePrint: 0
+      PrintFrameDelay: 1
+      RevealInstantly: 0
+    - Implementation: Naninovel.UITextPrinter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      Loader:
+        PathPrefix: TextPrinters
+        ProviderTypes:
+        - Naninovel.AddressableResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        - Naninovel.ProjectResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      guid: 145b5bd6-9d46-45c8-bf0a-4d11c178d809
+      customData:
+        rid: -2
+      Pivot: {x: 0.5, y: 0.5}
+      PixelsPerUnit: 100
+      FilterMode: 2
+      EnableDepthPass: 1
+      DepthAlphaCutoff: 0.5
+      CustomTextureMaterial: {fileID: 0}
+      CustomSpriteMaterial: {fileID: 0}
+      RenderTexture: {fileID: 0}
+      RenderRectangle:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 1
+      AutoReset: 0
+      AutoDefault: 1
+      AutoWait: 1
+      WaitAfterRevealSkip: 1
+      AddToBacklog: 1
+      StopVoice: 0
+      ChangeVisibilityDuration: 0.3
+      WaitVisibilityBeforePrint: 0
+      PrintFrameDelay: 1
+      RevealInstantly: 0
+    - Implementation: Naninovel.UITextPrinter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      Loader:
+        PathPrefix: TextPrinters
+        ProviderTypes:
+        - Naninovel.AddressableResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        - Naninovel.ProjectResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      guid: 962f784b-953e-4ead-b4ad-5842c1274490
+      customData:
+        rid: -2
+      Pivot: {x: 0.5, y: 0.5}
+      PixelsPerUnit: 100
+      FilterMode: 2
+      EnableDepthPass: 1
+      DepthAlphaCutoff: 0.5
+      CustomTextureMaterial: {fileID: 0}
+      CustomSpriteMaterial: {fileID: 0}
+      RenderTexture: {fileID: 0}
+      RenderRectangle:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 1
+      AutoReset: 1
+      AutoDefault: 1
+      AutoWait: 1
+      WaitAfterRevealSkip: 1
+      AddToBacklog: 1
+      StopVoice: 0
+      ChangeVisibilityDuration: 0.3
+      WaitVisibilityBeforePrint: 0
+      PrintFrameDelay: 1
+      RevealInstantly: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
