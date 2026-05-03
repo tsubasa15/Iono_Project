@@ -19,18 +19,6 @@
             "group": "ChoiceHandlers/ae560bd1-7fc1-43ed-a30c-67fc554a4cb8"
         },
         {
-            "guid": "fb2b4b067a5c07546bb0fa672c86383d",
-            "prefix": "Scripts",
-            "path": "Entry",
-            "group": ""
-        },
-        {
-            "guid": "90b373611e37ee0409314f8c462ea99c",
-            "prefix": "Scripts",
-            "path": "Title",
-            "group": ""
-        },
-        {
             "guid": "7bf06fa813bb9c34daf521998fa72ab1",
             "prefix": "Spawn",
             "path": "Animate",
