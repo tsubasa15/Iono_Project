@@ -1,0 +1,4 @@
+; Placeholder defeat ADV.
+
+@print "仮：敗北ADVです。次の週へ進みます。"
+@goto NextWeek

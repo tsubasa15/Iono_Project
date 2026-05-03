@@ -1,0 +1,5 @@
+; Advance to the next day after resting.
+
+@set n_stamina=10
+@set n_dayOfWeek+=1
+@goto DayLoop

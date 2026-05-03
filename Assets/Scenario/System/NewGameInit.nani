@@ -1,0 +1,12 @@
+; New Game initialization. Do not call from load or regular gameplay.
+
+@set n_money=3000
+@set n_stamina=10
+@set n_wincount=0
+@set n_dayOfWeek=1
+@set n_week=1
+@set n_enemyHpPct_Boss1=100
+@set b_Recon_Boss1_A_1=false
+@set b_Recon_Boss1_A_2=false
+@set b_Recon_Boss1_A_3=false
+@return

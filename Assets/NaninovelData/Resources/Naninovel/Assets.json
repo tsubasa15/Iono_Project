@@ -19,6 +19,96 @@
             "group": "ChoiceHandlers/ae560bd1-7fc1-43ed-a30c-67fc554a4cb8"
         },
         {
+            "guid": "b9ea03a4aa10b164ba9b3f79fa9d1571",
+            "prefix": "Fonts",
+            "path": "NotoSansJP-VariableFont_wght SDF",
+            "group": ""
+        },
+        {
+            "guid": "eb5de6ab1fed4765ba9b2a71e253ec40",
+            "prefix": "Scripts",
+            "path": "Battle/Boss1_BattleEntry",
+            "group": ""
+        },
+        {
+            "guid": "b9447a986d474cfd839524a956416a94",
+            "prefix": "Scripts",
+            "path": "ClearADV",
+            "group": ""
+        },
+        {
+            "guid": "bd01d791bc904872bc10ffd12fbe3e9f",
+            "prefix": "Scripts",
+            "path": "DayLoop",
+            "group": ""
+        },
+        {
+            "guid": "4dbb6166be234c60a79d979853c65265",
+            "prefix": "Scripts",
+            "path": "DefeatADV",
+            "group": ""
+        },
+        {
+            "guid": "1a3322a4dbdb4e0a8c1a8d85f5576a25",
+            "prefix": "Scripts",
+            "path": "Home",
+            "group": ""
+        },
+        {
+            "guid": "771b8f7d39b34f5895a3e26539030287",
+            "prefix": "Scripts",
+            "path": "Main",
+            "group": ""
+        },
+        {
+            "guid": "cdf97354f3794258b5a2d537a84bc6fb",
+            "prefix": "Scripts",
+            "path": "NextDay",
+            "group": ""
+        },
+        {
+            "guid": "1d01c3d7ec3b4fe49603b86121343935",
+            "prefix": "Scripts",
+            "path": "NextWeek",
+            "group": ""
+        },
+        {
+            "guid": "f808f0a395564b1ab7f674054794e925",
+            "prefix": "Scripts",
+            "path": "Recon/ReconEntry",
+            "group": ""
+        },
+        {
+            "guid": "6e65a2228fcd4bb0b099e5128fe31a36",
+            "prefix": "Scripts",
+            "path": "Shop/ShopEntry",
+            "group": ""
+        },
+        {
+            "guid": "89482cf4bd304c8886ce690f19317653",
+            "prefix": "Scripts",
+            "path": "System/NewGameInit",
+            "group": ""
+        },
+        {
+            "guid": "1464c64e39984e49ae3842d840779506",
+            "prefix": "Scripts",
+            "path": "Title",
+            "group": ""
+        },
+        {
+            "guid": "eab9ea5c140843fea2d89c1435aeac50",
+            "prefix": "Scripts",
+            "path": "Train/TrainEntry",
+            "group": ""
+        },
+        {
+            "guid": "bda3c72a8dea4750b106e5596fb34340",
+            "prefix": "Scripts",
+            "path": "Work/WorkEntry",
+            "group": ""
+        },
+        {
             "guid": "7bf06fa813bb9c34daf521998fa72ab1",
             "prefix": "Spawn",
             "path": "Animate",
@@ -121,6 +211,12 @@
             "group": ""
         },
         {
+            "guid": "0e306512a9a689d4eb38e2c2aae92ce8",
+            "prefix": "UI",
+            "path": "BattleUI",
+            "group": ""
+        },
+        {
             "guid": "71da50c8dae82bd42ba67528804e820c",
             "prefix": "UI",
             "path": "CGGalleryUI",
@@ -148,6 +244,18 @@
             "guid": "671ceb4f549ddf046913d7debf113469",
             "prefix": "UI",
             "path": "ExternalScriptsUI",
+            "group": ""
+        },
+        {
+            "guid": "e64f65ee1bc1c4f45b7ae2a745fe1e7a",
+            "prefix": "UI",
+            "path": "HomeUI",
+            "group": ""
+        },
+        {
+            "guid": "30b81824404e5734396db6ea019533c6",
+            "prefix": "UI",
+            "path": "InventoryUI",
             "group": ""
         },
         {
@@ -196,6 +304,12 @@
             "guid": "65c37f59e9b266f468dd5381fdc03fc3",
             "prefix": "UI",
             "path": "SettingsUI",
+            "group": ""
+        },
+        {
+            "guid": "ee4230b20e35c9249a4c5cbe9a7914fb",
+            "prefix": "UI",
+            "path": "ShopUI",
             "group": ""
         },
         {

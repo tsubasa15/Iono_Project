@@ -1,0 +1,57 @@
+; Temporary Boss1 battle entry. The real battle command is not used in this phase.
+
+@set r_battleResultCode="None"
+@set r_battleWinType="None"
+@set r_battleReachedStage=0
+@set tmp_battleReachedStage=0
+@print "仮：Boss1 バトルです。現在HP {n_enemyHpPct_Boss1}% / 進行 {n_wincount}"
+@addChoice "仮：区切り勝利" goto:#CheckpointWin
+@addChoice "仮：敗北" goto:#Lose
+@addChoice "仮：撃破勝利" goto:#ClearWin
+@stop
+
+# CheckpointWin
+@clearChoice
+@if n_wincount<3
+@set tmp_battleReachedStage=n_wincount+1
+@if tmp_battleReachedStage==1
+@set n_wincount=1
+@set n_enemyHpPct_Boss1=75
+@set r_battleReachedStage=1
+@else
+@if tmp_battleReachedStage==2
+@set n_wincount=2
+@set n_enemyHpPct_Boss1=50
+@set r_battleReachedStage=2
+@else
+@set n_wincount=3
+@set n_enemyHpPct_Boss1=25
+@set r_battleReachedStage=3
+@endIf
+@endIf
+@else
+@set r_battleReachedStage=3
+@print "仮：区切り勝利は最大段階に到達済みです。"
+@endIf
+@set r_battleResultCode="Win"
+@set r_battleWinType="CheckpointWin"
+@print "仮：区切り勝利。Boss1 HP {n_enemyHpPct_Boss1}%"
+@return
+
+# Lose
+@clearChoice
+@set r_battleResultCode="Lose"
+@set r_battleWinType="None"
+@set r_battleReachedStage=0
+@print "仮：敗北。Boss1 HP は更新しません。"
+@return
+
+# ClearWin
+@clearChoice
+@set n_enemyHpPct_Boss1=0
+@set n_wincount=4
+@set r_battleResultCode="Win"
+@set r_battleWinType="ClearWin"
+@set r_battleReachedStage=4
+@print "仮：撃破勝利。Boss1 HP 0%"
+@return

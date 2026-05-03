@@ -1,0 +1,5 @@
+; Temporary train entry. No train implementation yet.
+
+@set r_trainDone=false
+@print "訓練は後続段階で実装します。"
+@return

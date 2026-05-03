@@ -1,0 +1,13 @@
+; Minimal work entry for temporary loop validation.
+
+@set r_workDone=false
+@set tmp_workGain=100
+@if n_stamina>=1
+@set n_stamina-=1
+@set n_money+=tmp_workGain
+@set r_workDone=true
+@print "金稼ぎをしました。Money +{tmp_workGain}"
+@else
+@print "スタミナが足りません。"
+@endIf
+@return

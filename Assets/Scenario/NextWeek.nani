@@ -1,0 +1,6 @@
+; Advance to the next week after Sunday battle flow.
+
+@set n_week+=1
+@set n_dayOfWeek=1
+@set n_stamina=10
+@goto DayLoop

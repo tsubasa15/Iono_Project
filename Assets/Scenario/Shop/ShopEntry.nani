@@ -1,0 +1,5 @@
+; Temporary shop entry. No shop implementation yet.
+
+@set r_shopDone=false
+@print "ショップは後続段階で実装します。"
+@return

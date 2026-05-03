@@ -1,0 +1,5 @@
+; Temporary recon entry. No recon implementation yet.
+
+@set r_reconDone=false
+@print "偵察は後続段階で実装します。"
+@return

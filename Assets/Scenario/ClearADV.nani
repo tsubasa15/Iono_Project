@@ -1,0 +1,4 @@
+; Placeholder clear ADV.
+
+@print "仮：撃破勝利です。クリア扱いで停止します。"
+@stop

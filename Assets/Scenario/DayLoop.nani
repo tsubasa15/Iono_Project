@@ -1,0 +1,21 @@
+; Routes each day to Home or the Sunday boss battle placeholder.
+
+@if n_dayOfWeek<7
+@goto Home
+@else
+@gosub Battle/Boss1_BattleEntry
+@if r_battleWinType=="ClearWin"
+@goto ClearADV
+@else
+@if r_battleWinType=="CheckpointWin"
+@goto NextWeek
+@else
+@if r_battleResultCode=="Lose"
+@goto DefeatADV
+@else
+@print "仮バトル結果が未確定です。次週へ進めます。"
+@goto NextWeek
+@endIf
+@endIf
+@endIf
+@endIf

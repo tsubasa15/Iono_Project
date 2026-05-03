@@ -1,0 +1,5 @@
+; Played on the Naninovel title screen.
+
+@print "Iono 仮タイトル"
+@showUI TitleUI
+@stop

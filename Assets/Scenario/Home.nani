@@ -1,0 +1,35 @@
+; Temporary standard-choice home menu.
+
+@print "Week {n_week} / Day {n_dayOfWeek} / Money {n_money} / Stamina {n_stamina}"
+@addChoice "休む" goto:NextDay
+@addChoice "金稼ぎ" goto:#Work
+@addChoice "訓練 仮" goto:#Train
+@addChoice "偵察 仮" goto:#Recon
+@addChoice "ショップ 仮" goto:#Shop
+@addChoice "インベントリ確認 仮" goto:#Inventory
+@stop
+
+# Work
+@clearChoice
+@gosub Work/WorkEntry
+@goto Home
+
+# Train
+@clearChoice
+@gosub Train/TrainEntry
+@goto Home
+
+# Recon
+@clearChoice
+@gosub Recon/ReconEntry
+@goto Home
+
+# Shop
+@clearChoice
+@gosub Shop/ShopEntry
+@goto Home
+
+# Inventory
+@clearChoice
+@print "インベントリ確認は後続段階で実装します。"
+@goto Home
