@@ -241,6 +241,12 @@
             "group": ""
         },
         {
+            "guid": "6a308a76dfb776d44b5873378491665e",
+            "prefix": "UI",
+            "path": "ExplorationUI",
+            "group": ""
+        },
+        {
             "guid": "671ceb4f549ddf046913d7debf113469",
             "prefix": "UI",
             "path": "ExternalScriptsUI",
@@ -328,6 +334,12 @@
             "guid": "dd85ce99288c2f8488447fa511b1c0d6",
             "prefix": "UI",
             "path": "ToastUI",
+            "group": ""
+        },
+        {
+            "guid": "8875b5ac3477f24448dfab422a7ca058",
+            "prefix": "UI",
+            "path": "TrainUI",
             "group": ""
         },
         {

@@ -470,6 +470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 440d0889d03dc0b40b086d5e32fb3785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  backButton: {fileID: 6262908259646901855}
 --- !u!223 &6306036015961478112
 Canvas:
   m_ObjectHideFlags: 0

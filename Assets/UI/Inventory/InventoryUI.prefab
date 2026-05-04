@@ -274,6 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360bd3db0dfa5d34e8edae7749c9158f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  closeButton: {fileID: 6536098634448427970}
 --- !u!225 &6306036015961478118
 CanvasGroup:
   m_ObjectHideFlags: 0
