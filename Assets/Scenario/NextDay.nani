@@ -1,5 +1,6 @@
 ; Advance to the next day after resting.
 
+@hideUI HomeUI time:0 wait!
 @set n_stamina=10
 @set n_dayOfWeek+=1
 @goto DayLoop

@@ -14,6 +14,7 @@ public class HomeUI : CustomUI
     private const string StaminaVariable = "n_stamina";
     private const string WeekVariable = "n_week";
     private const string DayOfWeekVariable = "n_dayOfWeek";
+    private static readonly string[] DayOfWeekLabels = { "月", "火", "水", "木", "金", "土", "日" };
 
     private const string OptionUIName = "OptionUI";
     private const string InventoryUIName = "InventoryUI";
@@ -47,6 +48,8 @@ public class HomeUI : CustomUI
     private IUIManager uis;
     private IScriptPlayer player;
 
+    public override bool VisibleOnAwake => false;
+
     protected override void Awake()
     {
         base.Awake();
@@ -61,8 +64,11 @@ public class HomeUI : CustomUI
         base.OnEnable();
 
         RegisterListeners();
-        RefreshHeader();
-        RefreshButtonInteractable();
+        if (Visible)
+        {
+            RefreshHeader();
+            RefreshButtonInteractable();
+        }
     }
 
     protected override void OnDisable()
@@ -90,10 +96,10 @@ public class HomeUI : CustomUI
         var week = GetIntVariable(WeekVariable);
         var dayOfWeek = GetIntVariable(DayOfWeekVariable);
 
-        SetText(moneyText, moneyLegacyText, $"所持金: {money}");
-        SetText(staminaText, staminaLegacyText, $"スタミナ: {stamina}");
-        SetText(weekText, weekLegacyText, $"Week: {week}");
-        SetText(dayOfWeekText, dayOfWeekLegacyText, $"Day: {dayOfWeek}");
+        SetText(moneyText, moneyLegacyText, money.ToString());
+        SetText(staminaText, staminaLegacyText, stamina.ToString());
+        SetText(weekText, weekLegacyText, week.ToString());
+        SetText(dayOfWeekText, dayOfWeekLegacyText, GetDayOfWeekLabel(dayOfWeek));
     }
 
     public void RefreshButtonInteractable()
@@ -213,12 +219,15 @@ public class HomeUI : CustomUI
             return;
         }
 
+        if (ui is ScriptableUIBehaviour uiBehaviour)
+            uiBehaviour.SortingOrder = Mathf.Max(uiBehaviour.SortingOrder, SortingOrder + 1);
+
         ui.Show();
     }
 
     private void HandleVariableUpdated(CustomVariableUpdatedArgs args)
     {
-        if (!IsHeaderVariable(args.Name))
+        if (!Visible || !IsHeaderVariable(args.Name))
             return;
 
         RefreshHeader();
@@ -234,6 +243,14 @@ public class HomeUI : CustomUI
             Debug.LogWarning($"HomeUI: Naninovel Local 変数 {variableName} が見つからないため 0 として表示します。");
 
         return 0;
+    }
+
+    private static string GetDayOfWeekLabel(int dayOfWeek)
+    {
+        if (dayOfWeek < 1 || dayOfWeek > DayOfWeekLabels.Length)
+            return dayOfWeek.ToString();
+
+        return DayOfWeekLabels[dayOfWeek - 1];
     }
 
     private void ResolveReferences()

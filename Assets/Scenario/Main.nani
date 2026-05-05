@@ -1,5 +1,5 @@
 ; Played once when starting a new game.
 
-@print "New Game を開始します。"
+@hideUI TitleUI
 @gosub System/NewGameInit
 @goto DayLoop

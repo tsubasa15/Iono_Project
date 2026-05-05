@@ -378,6 +378,64 @@ MonoBehaviour:
       m_LigatureGlyphID: 2069
     - m_ComponentGlyphIDs: 4c000000f8010000
       m_LigatureGlyphID: 2029
+    - m_ComponentGlyphIDs: 1400000011000000ac180000
+      m_LigatureGlyphID: 2130
+    - m_ComponentGlyphIDs: 1400000012000000ac180000
+      m_LigatureGlyphID: 2131
+    - m_ComponentGlyphIDs: 14000000ac180000
+      m_LigatureGlyphID: 2103
+    - m_ComponentGlyphIDs: 140000007e190000
+      m_LigatureGlyphID: 1816
+    - m_ComponentGlyphIDs: 140000008b1f0000
+      m_LigatureGlyphID: 1968
+    - m_ComponentGlyphIDs: 1300000011000000ac180000
+      m_LigatureGlyphID: 2120
+    - m_ComponentGlyphIDs: 13000000110000008b1f0000
+      m_LigatureGlyphID: 1985
+    - m_ComponentGlyphIDs: 1300000012000000ac180000
+      m_LigatureGlyphID: 2121
+    - m_ComponentGlyphIDs: 13000000120000008b1f0000
+      m_LigatureGlyphID: 1986
+    - m_ComponentGlyphIDs: 1300000013000000ac180000
+      m_LigatureGlyphID: 2122
+    - m_ComponentGlyphIDs: 13000000130000008b1f0000
+      m_LigatureGlyphID: 1987
+    - m_ComponentGlyphIDs: 1300000014000000ac180000
+      m_LigatureGlyphID: 2123
+    - m_ComponentGlyphIDs: 13000000140000008b1f0000
+      m_LigatureGlyphID: 1988
+    - m_ComponentGlyphIDs: 1300000015000000ac180000
+      m_LigatureGlyphID: 2124
+    - m_ComponentGlyphIDs: 13000000150000008b1f0000
+      m_LigatureGlyphID: 1989
+    - m_ComponentGlyphIDs: 1300000016000000ac180000
+      m_LigatureGlyphID: 2125
+    - m_ComponentGlyphIDs: 1300000017000000ac180000
+      m_LigatureGlyphID: 2126
+    - m_ComponentGlyphIDs: 1300000018000000ac180000
+      m_LigatureGlyphID: 2127
+    - m_ComponentGlyphIDs: 1300000019000000ac180000
+      m_LigatureGlyphID: 2128
+    - m_ComponentGlyphIDs: 130000001a000000ac180000
+      m_LigatureGlyphID: 2129
+    - m_ComponentGlyphIDs: 13000000ac180000
+      m_LigatureGlyphID: 2102
+    - m_ComponentGlyphIDs: 130000007e190000
+      m_LigatureGlyphID: 1815
+    - m_ComponentGlyphIDs: 130000008b1f0000
+      m_LigatureGlyphID: 1967
+    - m_ComponentGlyphIDs: 16000000ac180000
+      m_LigatureGlyphID: 2105
+    - m_ComponentGlyphIDs: 160000007e190000
+      m_LigatureGlyphID: 1818
+    - m_ComponentGlyphIDs: 160000008b1f0000
+      m_LigatureGlyphID: 1970
+    - m_ComponentGlyphIDs: 17000000ac180000
+      m_LigatureGlyphID: 2106
+    - m_ComponentGlyphIDs: 170000007e190000
+      m_LigatureGlyphID: 1819
+    - m_ComponentGlyphIDs: 170000008b1f0000
+      m_LigatureGlyphID: 1971
     m_GlyphPairAdjustmentRecords:
     - m_FirstAdjustmentRecord:
         m_GlyphIndex: 1205
@@ -2824,6 +2882,51 @@ MonoBehaviour:
           m_XAdvance: 0
           m_YAdvance: 0
       m_FeatureLookupFlags: 1943683903
+    - m_FirstAdjustmentRecord:
+        m_GlyphIndex: 1232
+        m_GlyphValueRecord:
+          m_XPlacement: 0
+          m_YPlacement: 0
+          m_XAdvance: 0
+          m_YAdvance: 0
+      m_SecondAdjustmentRecord:
+        m_GlyphIndex: 1263
+        m_GlyphValueRecord:
+          m_XPlacement: 0
+          m_YPlacement: 0
+          m_XAdvance: 0
+          m_YAdvance: 0
+      m_FeatureLookupFlags: -872004801
+    - m_FirstAdjustmentRecord:
+        m_GlyphIndex: 1232
+        m_GlyphValueRecord:
+          m_XPlacement: 0
+          m_YPlacement: 0
+          m_XAdvance: 0
+          m_YAdvance: 0
+      m_SecondAdjustmentRecord:
+        m_GlyphIndex: 65506
+        m_GlyphValueRecord:
+          m_XPlacement: 0
+          m_YPlacement: 0
+          m_XAdvance: 0
+          m_YAdvance: 0
+      m_FeatureLookupFlags: -872004801
+    - m_FirstAdjustmentRecord:
+        m_GlyphIndex: 1232
+        m_GlyphValueRecord:
+          m_XPlacement: 0
+          m_YPlacement: 0
+          m_XAdvance: 0
+          m_YAdvance: 0
+      m_SecondAdjustmentRecord:
+        m_GlyphIndex: 0
+        m_GlyphValueRecord:
+          m_XPlacement: 0
+          m_YPlacement: 0
+          m_XAdvance: 0
+          m_YAdvance: 0
+      m_FeatureLookupFlags: -872004801
     m_MarkToBaseAdjustmentRecords: []
     m_MarkToMarkAdjustmentRecords: []
   m_ShouldReimportFontFeatures: 0

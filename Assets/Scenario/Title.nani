@@ -1,5 +1,5 @@
 ; Played on the Naninovel title screen.
 
-@print "Iono 仮タイトル"
-@showUI TitleUI
+@hideUI HomeUI,ExplorationUI,InventoryUI,ShopUI,TrainUI,OptionUI time:0 wait!
+@showUI TitleUI time:0 wait!
 @stop

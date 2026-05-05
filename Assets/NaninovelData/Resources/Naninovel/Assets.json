@@ -265,6 +265,12 @@
             "group": ""
         },
         {
+            "guid": "71c5dd87a9a5b624e9c4f297e13fe267",
+            "prefix": "UI",
+            "path": "OptionUI",
+            "group": ""
+        },
+        {
             "guid": "53aad00e5cf184e458adb001c550518a",
             "prefix": "UI",
             "path": "LoadingUI",
