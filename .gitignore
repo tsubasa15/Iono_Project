@@ -20,3 +20,26 @@
 Thumbs.db
 .vscode/
 .idea/
+
+# --- 以下、今回追記した項目 ---
+
+# Visual Studio関連（ローカル設定・プロジェクトファイル）
+.vs/
+*.csproj
+*.sln
+*.suo
+
+# Unity自動生成・クラッシュリカバリ関連
+/[Aa]ssets/_Recovery/
+UpgradeLog.htm
+
+# Naninovel ローカルセーブ・一時通信データ
+/[Aa]ssets/NaninovelData/.nani/Transient/
+Assets/_Recovery.meta
+Elringus.Naninovel.E2E.csproj
+Elringus.Naninovel.Editor.csproj
+Elringus.Naninovel.Runtime.csproj
+Iono.sln
+Assets/NaninovelData/.nani/Transient/Bridging/Server
+Assets/NaninovelData/.nani/Transient/Saves/Settings.json
+Assets/NaninovelData/.nani/Transient/Metadata.json
