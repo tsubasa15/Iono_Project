@@ -28,8 +28,5 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   OverrideObjectsLayer: 1
   ObjectsLayer: 5
-  FontOptions:
-  - FontName: 
-    FontResource: 
-    ApplyOnLocale: 
+  FontOptions: []
   DefaultFont: 
