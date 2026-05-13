@@ -214,6 +214,8 @@ namespace Iono.MasterData
 		public static BansheeGz.BGDatabase.BGFieldString _tag1 => _ufle12jhs77_tag1 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5747392093184680619UL, 11461701534163657639UL), () => _ufle12jhs77_tag1 = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_tag2;
 		public static BansheeGz.BGDatabase.BGFieldString _tag2 => _ufle12jhs77_tag2 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4990019138333856925UL, 2736679447966676656UL), () => _ufle12jhs77_tag2 = null);
+		private static BansheeGz.BGDatabase.BGKey _edeht3sdad33_unitKey;
+		public static BansheeGz.BGDatabase.BGKey _unitKey => _edeht3sdad33_unitKey ??= BGCodeGenUtils.GetKey(MetaDefault, new BGId(4917211555327134970UL, 1585179892647103120UL), () => _edeht3sdad33_unitKey = null);
 		private playerunit() : base(MetaDefault) {}
 		private playerunit(BGId id) : base(MetaDefault, id) {}
 		private playerunit(BGMetaEntity meta) : base(meta) {}
@@ -227,6 +229,7 @@ namespace Iono.MasterData
 		public static playerunit NewEntity() => (playerunit) MetaDefault.NewEntity();
 		public static playerunit NewEntity(BGId entityId) => (playerunit) MetaDefault.NewEntity(entityId);
 		public static playerunit NewEntity(Action<playerunit> callback) => (playerunit) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((playerunit)entity)));
+		public static playerunit GetEntityByKeyunitKey(System.String unitId) => (playerunit) _unitKey.GetEntityByKey<System.String>(unitId);
 		public static void InitializeCodeGenRuntime()
 		{
 			_metaDefault = BGCodeGenUtils.GetMeta<BansheeGz.BGDatabase.BGMetaRow>(new BGId(4790555902238545626UL,13817290720767131295UL), ReleaseCodeGenRuntime);
@@ -258,6 +261,7 @@ namespace Iono.MasterData
 			_ufle12jhs77_resConfusion = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4808274001478605073UL, 7873230605581973130UL));
 			_ufle12jhs77_tag1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5747392093184680619UL, 11461701534163657639UL));
 			_ufle12jhs77_tag2 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4990019138333856925UL, 2736679447966676656UL));
+			_edeht3sdad33_unitKey = BGCodeGenUtils.GetKey(_metaDefault, new BGId(4917211555327134970UL, 1585179892647103120UL));
 		}
 		public static void ReleaseCodeGenRuntime()
 		{
@@ -290,6 +294,7 @@ namespace Iono.MasterData
 			_ufle12jhs77_resConfusion = null;
 			_ufle12jhs77_tag1 = null;
 			_ufle12jhs77_tag2 = null;
+			_edeht3sdad33_unitKey = null;
 		}
 
 		[Preserve]
@@ -330,6 +335,7 @@ namespace Iono.MasterData
 			public const string resConfusion = "resConfusion";
 			public const string tag1 = "tag1";
 			public const string tag2 = "tag2";
+			public const string unitKey = "unitKey";
 		}
 	}
 }

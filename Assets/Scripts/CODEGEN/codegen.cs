@@ -19,12 +19,40 @@ namespace Iono.MasterData
 		{
 			TextMaster.InitializeCodeGenRuntime();
 			playerunit.InitializeCodeGenRuntime();
+			enemyunit.InitializeCodeGenRuntime();
+			enemypattern.InitializeCodeGenRuntime();
+			enemyslotdetail.InitializeCodeGenRuntime();
+			item.InitializeCodeGenRuntime();
+			type.InitializeCodeGenRuntime();
+			typeCompatibility.InitializeCodeGenRuntime();
+			janken.InitializeCodeGenRuntime();
+			jankenCompatibility.InitializeCodeGenRuntime();
+			skill.InitializeCodeGenRuntime();
+			weather.InitializeCodeGenRuntime();
+			field.InitializeCodeGenRuntime();
+			buffdebuff.InitializeCodeGenRuntime();
+			abnormalcondition.InitializeCodeGenRuntime();
+			specialeffect.InitializeCodeGenRuntime();
 		}
 		[Preserve]
 		public static void ReleaseCodeGenRuntime()
 		{
 			TextMaster.ReleaseCodeGenRuntime();
 			playerunit.ReleaseCodeGenRuntime();
+			enemyunit.ReleaseCodeGenRuntime();
+			enemypattern.ReleaseCodeGenRuntime();
+			enemyslotdetail.ReleaseCodeGenRuntime();
+			item.ReleaseCodeGenRuntime();
+			type.ReleaseCodeGenRuntime();
+			typeCompatibility.ReleaseCodeGenRuntime();
+			janken.ReleaseCodeGenRuntime();
+			jankenCompatibility.ReleaseCodeGenRuntime();
+			skill.ReleaseCodeGenRuntime();
+			weather.ReleaseCodeGenRuntime();
+			field.ReleaseCodeGenRuntime();
+			buffdebuff.ReleaseCodeGenRuntime();
+			abnormalcondition.ReleaseCodeGenRuntime();
+			specialeffect.ReleaseCodeGenRuntime();
 		}
 	}
 }
