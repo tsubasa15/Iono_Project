@@ -39,6 +39,19 @@ namespace Iono.MasterData
 		public static BansheeGz.BGDatabase.BGFieldString _typeId => _ufle12jhs77_typeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5457999410012519271UL, 3561462322462045312UL), () => _ufle12jhs77_typeId = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_resourceId;
 		public static BansheeGz.BGDatabase.BGFieldString _resourceId => _ufle12jhs77_resourceId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4653291197613326685UL, 11071715819853603991UL), () => _ufle12jhs77_resourceId = null);
+		public List<Iono.MasterData.playerunit> RelatedplayerunitListUsingtypeIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.playerunit>(Iono.MasterData.playerunit._typeId, Id);
+		public List<Iono.MasterData.enemyunit> RelatedenemyunitListUsingtypeIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemyunit>(Iono.MasterData.enemyunit._typeId, Id);
+		public List<Iono.MasterData.weather> RelatedweatherListUsingslipDamageImmuneTypeIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.weather>(Iono.MasterData.weather._slipDamageImmuneTypeId, Id);
+		public List<Iono.MasterData.weather> RelatedweatherListUsingplusDamageTypeIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.weather>(Iono.MasterData.weather._plusDamageTypeId, Id);
+		public List<Iono.MasterData.weather> RelatedweatherListUsingminusDamageTypeIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.weather>(Iono.MasterData.weather._minusDamageTypeId, Id);
+		public List<Iono.MasterData.weather> RelatedweatherListUsingbuffDefTypeIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.weather>(Iono.MasterData.weather._buffDefTypeId, Id);
+		public List<Iono.MasterData.weather> RelatedweatherListUsingbuffSpDefTypeIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.weather>(Iono.MasterData.weather._buffSpDefTypeId, Id);
+		public List<Iono.MasterData.field> RelatedfieldListUsingplusDamageTypeIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.field>(Iono.MasterData.field._plusDamageTypeId, Id);
+		public List<Iono.MasterData.field> RelatedfieldListUsingminusDamageTypeIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.field>(Iono.MasterData.field._minusDamageTypeId, Id);
+		public List<Iono.MasterData.buffdebuff> RelatedbuffdebuffListUsingtypeIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.buffdebuff>(Iono.MasterData.buffdebuff._typeId, Id);
+		public List<Iono.MasterData.abnormalcondition> RelatedabnormalconditionListUsingtypeIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.abnormalcondition>(Iono.MasterData.abnormalcondition._typeId, Id);
+		public List<Iono.MasterData.abnormalcondition> RelatedabnormalconditionListUsingattachedBuffId1Relation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.abnormalcondition>(Iono.MasterData.abnormalcondition._attachedBuffId1, Id);
+		public List<Iono.MasterData.abnormalcondition> RelatedabnormalconditionListUsingattachedBuffId2Relation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.abnormalcondition>(Iono.MasterData.abnormalcondition._attachedBuffId2, Id);
 		private static BansheeGz.BGDatabase.BGKey _edeht3sdad33_typeKey;
 		public static BansheeGz.BGDatabase.BGKey _typeKey => _edeht3sdad33_typeKey ??= BGCodeGenUtils.GetKey(MetaDefault, new BGId(5315714938949888301UL, 11490291428060841866UL), () => _edeht3sdad33_typeKey = null);
 		private type() : base(MetaDefault) {}
@@ -54,6 +67,19 @@ namespace Iono.MasterData
 		public static type NewEntity() => (type) MetaDefault.NewEntity();
 		public static type NewEntity(BGId entityId) => (type) MetaDefault.NewEntity(entityId);
 		public static type NewEntity(Action<type> callback) => (type) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((type)entity)));
+		public List<Iono.MasterData.playerunit> FillRelatedplayerunitListUsingtypeIdRelation(List<Iono.MasterData.playerunit> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.playerunit>(Iono.MasterData.playerunit._typeId, Id, result);
+		public List<Iono.MasterData.enemyunit> FillRelatedenemyunitListUsingtypeIdRelation(List<Iono.MasterData.enemyunit> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemyunit>(Iono.MasterData.enemyunit._typeId, Id, result);
+		public List<Iono.MasterData.weather> FillRelatedweatherListUsingslipDamageImmuneTypeIdRelation(List<Iono.MasterData.weather> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.weather>(Iono.MasterData.weather._slipDamageImmuneTypeId, Id, result);
+		public List<Iono.MasterData.weather> FillRelatedweatherListUsingplusDamageTypeIdRelation(List<Iono.MasterData.weather> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.weather>(Iono.MasterData.weather._plusDamageTypeId, Id, result);
+		public List<Iono.MasterData.weather> FillRelatedweatherListUsingminusDamageTypeIdRelation(List<Iono.MasterData.weather> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.weather>(Iono.MasterData.weather._minusDamageTypeId, Id, result);
+		public List<Iono.MasterData.weather> FillRelatedweatherListUsingbuffDefTypeIdRelation(List<Iono.MasterData.weather> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.weather>(Iono.MasterData.weather._buffDefTypeId, Id, result);
+		public List<Iono.MasterData.weather> FillRelatedweatherListUsingbuffSpDefTypeIdRelation(List<Iono.MasterData.weather> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.weather>(Iono.MasterData.weather._buffSpDefTypeId, Id, result);
+		public List<Iono.MasterData.field> FillRelatedfieldListUsingplusDamageTypeIdRelation(List<Iono.MasterData.field> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.field>(Iono.MasterData.field._plusDamageTypeId, Id, result);
+		public List<Iono.MasterData.field> FillRelatedfieldListUsingminusDamageTypeIdRelation(List<Iono.MasterData.field> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.field>(Iono.MasterData.field._minusDamageTypeId, Id, result);
+		public List<Iono.MasterData.buffdebuff> FillRelatedbuffdebuffListUsingtypeIdRelation(List<Iono.MasterData.buffdebuff> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.buffdebuff>(Iono.MasterData.buffdebuff._typeId, Id, result);
+		public List<Iono.MasterData.abnormalcondition> FillRelatedabnormalconditionListUsingtypeIdRelation(List<Iono.MasterData.abnormalcondition> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.abnormalcondition>(Iono.MasterData.abnormalcondition._typeId, Id, result);
+		public List<Iono.MasterData.abnormalcondition> FillRelatedabnormalconditionListUsingattachedBuffId1Relation(List<Iono.MasterData.abnormalcondition> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.abnormalcondition>(Iono.MasterData.abnormalcondition._attachedBuffId1, Id, result);
+		public List<Iono.MasterData.abnormalcondition> FillRelatedabnormalconditionListUsingattachedBuffId2Relation(List<Iono.MasterData.abnormalcondition> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.abnormalcondition>(Iono.MasterData.abnormalcondition._attachedBuffId2, Id, result);
 		public static type GetEntityByKeytypeKey(System.String typeId) => (type) _typeKey.GetEntityByKey<System.String>(typeId);
 		public static void InitializeCodeGenRuntime()
 		{

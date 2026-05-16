@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,173 +5,41 @@ namespace Iono.Game.MasterData
 {
     public sealed class PlayerUnitMasterRepository
     {
-        private readonly object cacheLock = new object();
-        private IReadOnlyList<PlayerUnitMasterData> cachedUnits;
-        private Dictionary<string, PlayerUnitMasterData> cachedUnitsById;
+        private readonly MasterDataCache<PlayerUnitMasterData> cache;
 
-        public IReadOnlyList<PlayerUnitMasterData> GetAll()
+        public PlayerUnitMasterRepository()
         {
-            EnsureCache();
-            return cachedUnits;
+            cache = new MasterDataCache<PlayerUnitMasterData>("PlayerUnit", "unitId", LoadAll, data => data.UnitId);
         }
 
-        public bool TryGetByUnitId(string unitId, out PlayerUnitMasterData data)
+        public IReadOnlyList<PlayerUnitMasterData> GetAll() => cache.GetAll();
+        public bool TryGetById(string id, out PlayerUnitMasterData data) => cache.TryGetById(id, out data);
+        public PlayerUnitMasterData GetById(string id) => cache.GetById(id);
+        public bool Exists(string id) => cache.Exists(id);
+        public void ClearCache() => cache.Clear();
+        public bool TryGetByUnitId(string unitId, out PlayerUnitMasterData data) => TryGetById(unitId, out data);
+        public PlayerUnitMasterData GetByUnitId(string unitId) => GetById(unitId);
+
+        private static IReadOnlyList<PlayerUnitMasterData> LoadAll()
         {
-            data = null;
-
-            if (string.IsNullOrWhiteSpace(unitId))
-            {
-                Debug.LogWarning("PlayerUnit master lookup failed. unitId is empty.");
-                return false;
-            }
-
-            EnsureCache();
-            return cachedUnitsById.TryGetValue(unitId, out data);
+            var items = new List<PlayerUnitMasterData>();
+            Iono.MasterData.playerunit.ForEachEntity(entity => items.Add(Convert(entity)));
+            return items;
         }
 
-        public PlayerUnitMasterData GetByUnitId(string unitId)
+        private static PlayerUnitMasterData Convert(Iono.MasterData.playerunit entity)
         {
-            if (TryGetByUnitId(unitId, out var data))
-                return data;
-
-            throw new KeyNotFoundException($"PlayerUnit master not found. unitId={unitId ?? "<null>"}");
-        }
-
-        public bool Exists(string unitId)
-        {
-            return TryGetByUnitId(unitId, out _);
-        }
-
-        public void ClearCache()
-        {
-            lock (cacheLock)
-            {
-                cachedUnits = null;
-                cachedUnitsById = null;
-            }
-        }
-
-        public void LogAllUnitsForDebug()
-        {
-            foreach (var unit in GetAll())
-                Debug.Log($"PlayerUnit master: unitId={unit.UnitId}, name={unit.Name}");
-        }
-
-        private void EnsureCache()
-        {
-            if (cachedUnits != null && cachedUnitsById != null)
-                return;
-
-            lock (cacheLock)
-            {
-                if (cachedUnits != null && cachedUnitsById != null)
-                    return;
-
-                var units = new List<PlayerUnitMasterData>();
-                var unitsById = new Dictionary<string, PlayerUnitMasterData>(StringComparer.Ordinal);
-
-                try
-                {
-                    Iono.MasterData.playerunit.ForEachEntity(entity =>
-                    {
-                        var data = Convert(entity);
-                        if (data == null)
-                            return;
-
-                        units.Add(data);
-
-                        if (string.IsNullOrWhiteSpace(data.UnitId))
-                        {
-                            Debug.LogWarning("PlayerUnit master has an empty unitId. This row was excluded from unitId lookup cache.");
-                            return;
-                        }
-
-                        if (unitsById.ContainsKey(data.UnitId))
-                        {
-                            Debug.LogWarning($"Duplicate PlayerUnit master unitId detected. The first row is kept. unitId={data.UnitId}");
-                            return;
-                        }
-
-                        unitsById.Add(data.UnitId, data);
-                    });
-                }
-                catch (Exception exception)
-                {
-                    Debug.LogError($"Failed to load PlayerUnit master data from BGDatabase. {exception}");
-                    units.Clear();
-                    unitsById.Clear();
-                }
-
-                cachedUnits = units.AsReadOnly();
-                cachedUnitsById = unitsById;
-            }
-        }
-
-        private PlayerUnitMasterData Convert(Iono.MasterData.playerunit entity)
-        {
-            if (entity == null)
-            {
-                Debug.LogWarning("PlayerUnit master conversion skipped because entity is null.");
-                return null;
-            }
-
-            var skillIds = CollectSkillIds(entity);
+            var owner = $"PlayerUnit unitId={MasterDataIdUtil.Display(entity.unitId)}";
+            var skillIds = new List<string>(4);
+            MasterDataIdUtil.AddIfNotEmpty(skillIds, MasterDataIdUtil.ToSkillId(entity.skillId1, owner, nameof(entity.skillId1)));
+            MasterDataIdUtil.AddIfNotEmpty(skillIds, MasterDataIdUtil.ToSkillId(entity.skillId2, owner, nameof(entity.skillId2)));
+            MasterDataIdUtil.AddIfNotEmpty(skillIds, MasterDataIdUtil.ToSkillId(entity.skillId3, owner, nameof(entity.skillId3)));
+            MasterDataIdUtil.AddIfNotEmpty(skillIds, MasterDataIdUtil.ToSkillId(entity.skillId4, owner, nameof(entity.skillId4)));
 
             if (entity.skillCount != skillIds.Count)
-            {
-                Debug.LogWarning(
-                    $"PlayerUnit master skillCount mismatch. unitId={SafeString(entity.unitId)}, skillCount={entity.skillCount}, actualSkillIds={skillIds.Count}");
-            }
+                Debug.LogWarning($"PlayerUnit master skillCount mismatch. unitId={MasterDataIdUtil.Display(entity.unitId)}, skillCount={entity.skillCount}, actualSkillIds={skillIds.Count}");
 
-            return new PlayerUnitMasterData(
-                entity.unitId,
-                entity.name,
-                entity.nameTextId,
-                entity.descTextId,
-                entity.memo,
-                entity.imageId,
-                entity.rarity,
-                entity.gender,
-                entity.typeId,
-                entity.passiveSkillId,
-                entity.skillCount,
-                skillIds.AsReadOnly(),
-                entity.maxLevel,
-                entity.hp,
-                entity.atk,
-                entity.def,
-                entity.spAtk,
-                entity.spDef,
-                entity.spd,
-                entity.resPoison,
-                entity.resSleep,
-                entity.resParalysis,
-                entity.resConfusion,
-                entity.tag1,
-                entity.tag2);
-        }
-
-        private static List<string> CollectSkillIds(Iono.MasterData.playerunit entity)
-        {
-            var skillIds = new List<string>(4);
-            AddSkillId(skillIds, entity.skillId1);
-            AddSkillId(skillIds, entity.skillId2);
-            AddSkillId(skillIds, entity.skillId3);
-            AddSkillId(skillIds, entity.skillId4);
-            return skillIds;
-        }
-
-        private static void AddSkillId(ICollection<string> skillIds, string skillId)
-        {
-            if (string.IsNullOrWhiteSpace(skillId))
-                return;
-
-            skillIds.Add(skillId);
-        }
-
-        private static string SafeString(string value)
-        {
-            return string.IsNullOrEmpty(value) ? "<empty>" : value;
+            return new PlayerUnitMasterData(entity.unitId, entity.name, entity.nameTextId, entity.descTextId, entity.memo, entity.imageId, entity.rarity, entity.gender, MasterDataIdUtil.ToTypeId(entity.typeId, owner, nameof(entity.typeId)), MasterDataIdUtil.ToSkillId(entity.passiveSkillId, owner, nameof(entity.passiveSkillId)), entity.skillCount, skillIds.AsReadOnly(), entity.maxLevel, entity.hp, entity.atk, entity.def, entity.spAtk, entity.spDef, entity.spd, entity.resPoison, entity.resSleep, entity.resParalysis, entity.resConfusion, entity.tag1, entity.tag2);
         }
     }
 }

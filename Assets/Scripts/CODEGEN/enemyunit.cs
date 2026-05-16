@@ -53,31 +53,6 @@ namespace Iono.MasterData
 			get => _gender[Index];
 			set => _gender[Index] = value;
 		}
-		public System.String typeId
-		{
-			get => _typeId[Index];
-			set => _typeId[Index] = value;
-		}
-		public System.String passiveSkillId
-		{
-			get => _passiveSkillId[Index];
-			set => _passiveSkillId[Index] = value;
-		}
-		public System.String patternId1
-		{
-			get => _patternId1[Index];
-			set => _patternId1[Index] = value;
-		}
-		public System.String patternId2
-		{
-			get => _patternId2[Index];
-			set => _patternId2[Index] = value;
-		}
-		public System.String patternId3
-		{
-			get => _patternId3[Index];
-			set => _patternId3[Index] = value;
-		}
 		public System.Int32 hp
 		{
 			get => _hp[Index];
@@ -143,6 +118,31 @@ namespace Iono.MasterData
 			get => _nWincount[Index];
 			set => _nWincount.SetValue(this, value);
 		}
+		public type typeId
+		{
+			get => (type) _typeId[Index];
+			set => _typeId[Index] = value;
+		}
+		public skill passiveSkillId
+		{
+			get => (skill) _passiveSkillId[Index];
+			set => _passiveSkillId[Index] = value;
+		}
+		public enemypattern patternId1
+		{
+			get => (enemypattern) _patternId1[Index];
+			set => _patternId1[Index] = value;
+		}
+		public enemypattern patternId2
+		{
+			get => (enemypattern) _patternId2[Index];
+			set => _patternId2[Index] = value;
+		}
+		public enemypattern patternId3
+		{
+			get => (enemypattern) _patternId3[Index];
+			set => _patternId3[Index] = value;
+		}
 		private static BansheeGz.BGDatabase.BGFieldEntityName _ufle12jhs77_name;
 		public static BansheeGz.BGDatabase.BGFieldEntityName _name => _ufle12jhs77_name ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(MetaDefault, new BGId(5141801515486244407UL, 7825536873107572116UL), () => _ufle12jhs77_name = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_enemyId;
@@ -157,16 +157,6 @@ namespace Iono.MasterData
 		public static BansheeGz.BGDatabase.BGFieldString _imageId => _ufle12jhs77_imageId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4943565377203862859UL, 1978886953351121046UL), () => _ufle12jhs77_imageId = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_gender;
 		public static BansheeGz.BGDatabase.BGFieldString _gender => _ufle12jhs77_gender ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5625313432302987723UL, 4096865780255537585UL), () => _ufle12jhs77_gender = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_typeId;
-		public static BansheeGz.BGDatabase.BGFieldString _typeId => _ufle12jhs77_typeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5466531870994569192UL, 7145433941445848218UL), () => _ufle12jhs77_typeId = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_passiveSkillId;
-		public static BansheeGz.BGDatabase.BGFieldString _passiveSkillId => _ufle12jhs77_passiveSkillId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5052098057617809126UL, 12410433078522667168UL), () => _ufle12jhs77_passiveSkillId = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_patternId1;
-		public static BansheeGz.BGDatabase.BGFieldString _patternId1 => _ufle12jhs77_patternId1 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5231454636854740178UL, 3555536274975862717UL), () => _ufle12jhs77_patternId1 = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_patternId2;
-		public static BansheeGz.BGDatabase.BGFieldString _patternId2 => _ufle12jhs77_patternId2 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5244087071410189256UL, 6815099320845197723UL), () => _ufle12jhs77_patternId2 = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_patternId3;
-		public static BansheeGz.BGDatabase.BGFieldString _patternId3 => _ufle12jhs77_patternId3 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5331557699733210069UL, 2800931836282143934UL), () => _ufle12jhs77_patternId3 = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_hp;
 		public static BansheeGz.BGDatabase.BGFieldInt _hp => _ufle12jhs77_hp ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5335272925889909868UL, 8996922719802329274UL), () => _ufle12jhs77_hp = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_atk;
@@ -193,6 +183,16 @@ namespace Iono.MasterData
 		public static BansheeGz.BGDatabase.BGFieldString _tag2 => _ufle12jhs77_tag2 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5742669554728063558UL, 9840451198634888591UL), () => _ufle12jhs77_tag2 = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_nWincount;
 		public static BansheeGz.BGDatabase.BGFieldInt _nWincount => _ufle12jhs77_nWincount ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4890149416489459488UL, 7701179678101878934UL), () => _ufle12jhs77_nWincount = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_typeId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _typeId => _ufle12jhs77_typeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5006314466140802145UL, 13546037775822006420UL), () => _ufle12jhs77_typeId = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_passiveSkillId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _passiveSkillId => _ufle12jhs77_passiveSkillId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5594680660547506182UL, 7411147513732158139UL), () => _ufle12jhs77_passiveSkillId = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_patternId1;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _patternId1 => _ufle12jhs77_patternId1 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5452403331052459873UL, 11993180790882645638UL), () => _ufle12jhs77_patternId1 = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_patternId2;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _patternId2 => _ufle12jhs77_patternId2 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(4865759233001546679UL, 5218297205876646829UL), () => _ufle12jhs77_patternId2 = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_patternId3;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _patternId3 => _ufle12jhs77_patternId3 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5228159484620751656UL, 7852049258246782868UL), () => _ufle12jhs77_patternId3 = null);
 		private static BansheeGz.BGDatabase.BGKey _edeht3sdad33_enemyKey;
 		public static BansheeGz.BGDatabase.BGKey _enemyKey => _edeht3sdad33_enemyKey ??= BGCodeGenUtils.GetKey(MetaDefault, new BGId(4925184542210416332UL, 4874785857179485868UL), () => _edeht3sdad33_enemyKey = null);
 		private enemyunit() : base(MetaDefault) {}
@@ -220,11 +220,6 @@ namespace Iono.MasterData
 			_ufle12jhs77_memo = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5034598974033327329UL, 227121275910717825UL));
 			_ufle12jhs77_imageId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4943565377203862859UL, 1978886953351121046UL));
 			_ufle12jhs77_gender = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5625313432302987723UL, 4096865780255537585UL));
-			_ufle12jhs77_typeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5466531870994569192UL, 7145433941445848218UL));
-			_ufle12jhs77_passiveSkillId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5052098057617809126UL, 12410433078522667168UL));
-			_ufle12jhs77_patternId1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5231454636854740178UL, 3555536274975862717UL));
-			_ufle12jhs77_patternId2 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5244087071410189256UL, 6815099320845197723UL));
-			_ufle12jhs77_patternId3 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5331557699733210069UL, 2800931836282143934UL));
 			_ufle12jhs77_hp = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5335272925889909868UL, 8996922719802329274UL));
 			_ufle12jhs77_atk = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5071019117707825172UL, 6623356890067510409UL));
 			_ufle12jhs77_def = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4775146271363402833UL, 7594620381264106626UL));
@@ -238,6 +233,11 @@ namespace Iono.MasterData
 			_ufle12jhs77_tag1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5532998002609912316UL, 196760643606742412UL));
 			_ufle12jhs77_tag2 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5742669554728063558UL, 9840451198634888591UL));
 			_ufle12jhs77_nWincount = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4890149416489459488UL, 7701179678101878934UL));
+			_ufle12jhs77_typeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5006314466140802145UL, 13546037775822006420UL));
+			_ufle12jhs77_passiveSkillId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5594680660547506182UL, 7411147513732158139UL));
+			_ufle12jhs77_patternId1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5452403331052459873UL, 11993180790882645638UL));
+			_ufle12jhs77_patternId2 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(4865759233001546679UL, 5218297205876646829UL));
+			_ufle12jhs77_patternId3 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5228159484620751656UL, 7852049258246782868UL));
 			_edeht3sdad33_enemyKey = BGCodeGenUtils.GetKey(_metaDefault, new BGId(4925184542210416332UL, 4874785857179485868UL));
 		}
 		public static void ReleaseCodeGenRuntime()
@@ -250,11 +250,6 @@ namespace Iono.MasterData
 			_ufle12jhs77_memo = null;
 			_ufle12jhs77_imageId = null;
 			_ufle12jhs77_gender = null;
-			_ufle12jhs77_typeId = null;
-			_ufle12jhs77_passiveSkillId = null;
-			_ufle12jhs77_patternId1 = null;
-			_ufle12jhs77_patternId2 = null;
-			_ufle12jhs77_patternId3 = null;
 			_ufle12jhs77_hp = null;
 			_ufle12jhs77_atk = null;
 			_ufle12jhs77_def = null;
@@ -268,6 +263,11 @@ namespace Iono.MasterData
 			_ufle12jhs77_tag1 = null;
 			_ufle12jhs77_tag2 = null;
 			_ufle12jhs77_nWincount = null;
+			_ufle12jhs77_typeId = null;
+			_ufle12jhs77_passiveSkillId = null;
+			_ufle12jhs77_patternId1 = null;
+			_ufle12jhs77_patternId2 = null;
+			_ufle12jhs77_patternId3 = null;
 			_edeht3sdad33_enemyKey = null;
 		}
 
@@ -288,11 +288,6 @@ namespace Iono.MasterData
 			public const string memo = "memo";
 			public const string imageId = "imageId";
 			public const string gender = "gender";
-			public const string typeId = "typeId";
-			public const string passiveSkillId = "passiveSkillId";
-			public const string patternId1 = "patternId1";
-			public const string patternId2 = "patternId2";
-			public const string patternId3 = "patternId3";
 			public const string hp = "hp";
 			public const string atk = "atk";
 			public const string def = "def";
@@ -306,6 +301,11 @@ namespace Iono.MasterData
 			public const string tag1 = "tag1";
 			public const string tag2 = "tag2";
 			public const string nWincount = "nWincount";
+			public const string typeId = "typeId";
+			public const string passiveSkillId = "passiveSkillId";
+			public const string patternId1 = "patternId1";
+			public const string patternId2 = "patternId2";
+			public const string patternId3 = "patternId3";
 			public const string enemyKey = "enemyKey";
 		}
 	}

@@ -23,11 +23,7 @@ namespace Iono.MasterData
 			get => _name[Index];
 			set => _name[Index] = value;
 		}
-		public System.String conditionId
-		{
-			get => _conditionId[Index];
-			set => _conditionId[Index] = value;
-		}
+		public System.String conditionId => _conditionId[Index];
 		public System.String memo
 		{
 			get => _memo[Index];
@@ -62,11 +58,6 @@ namespace Iono.MasterData
 		{
 			get => _tag2[Index];
 			set => _tag2[Index] = value;
-		}
-		public System.String typeId
-		{
-			get => _typeId[Index];
-			set => _typeId[Index] = value;
 		}
 		public System.String effectTarget
 		{
@@ -143,14 +134,19 @@ namespace Iono.MasterData
 			get => _doomTurnCount[Index];
 			set => _doomTurnCount.SetValue(this, value);
 		}
-		public System.String attachedBuffId1
+		public type typeId
 		{
-			get => _attachedBuffId1[Index];
+			get => (type) _typeId[Index];
+			set => _typeId[Index] = value;
+		}
+		public type attachedBuffId1
+		{
+			get => (type) _attachedBuffId1[Index];
 			set => _attachedBuffId1[Index] = value;
 		}
-		public System.String attachedBuffId2
+		public type attachedBuffId2
 		{
-			get => _attachedBuffId2[Index];
+			get => (type) _attachedBuffId2[Index];
 			set => _attachedBuffId2[Index] = value;
 		}
 		private static BansheeGz.BGDatabase.BGFieldEntityName _ufle12jhs77_name;
@@ -171,8 +167,6 @@ namespace Iono.MasterData
 		public static BansheeGz.BGDatabase.BGFieldString _tag1 => _ufle12jhs77_tag1 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4785134287183922914UL, 7054056355321891475UL), () => _ufle12jhs77_tag1 = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_tag2;
 		public static BansheeGz.BGDatabase.BGFieldString _tag2 => _ufle12jhs77_tag2 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4755590936128731124UL, 4131268378458540949UL), () => _ufle12jhs77_tag2 = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_typeId;
-		public static BansheeGz.BGDatabase.BGFieldString _typeId => _ufle12jhs77_typeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4994271164916252374UL, 545136052724525219UL), () => _ufle12jhs77_typeId = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_effectTarget;
 		public static BansheeGz.BGDatabase.BGFieldString _effectTarget => _ufle12jhs77_effectTarget ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5398523903401147669UL, 14869467623333315214UL), () => _ufle12jhs77_effectTarget = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_consumeTiming;
@@ -203,10 +197,16 @@ namespace Iono.MasterData
 		public static BansheeGz.BGDatabase.BGFieldInt _burnAtkReduceRate => _ufle12jhs77_burnAtkReduceRate ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4857696108406581367UL, 14963172996642984362UL), () => _ufle12jhs77_burnAtkReduceRate = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_doomTurnCount;
 		public static BansheeGz.BGDatabase.BGFieldInt _doomTurnCount => _ufle12jhs77_doomTurnCount ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5175033093695105633UL, 13163328294357415613UL), () => _ufle12jhs77_doomTurnCount = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_attachedBuffId1;
-		public static BansheeGz.BGDatabase.BGFieldString _attachedBuffId1 => _ufle12jhs77_attachedBuffId1 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5636943192004502552UL, 119439268795190715UL), () => _ufle12jhs77_attachedBuffId1 = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_attachedBuffId2;
-		public static BansheeGz.BGDatabase.BGFieldString _attachedBuffId2 => _ufle12jhs77_attachedBuffId2 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4918945830581261863UL, 7821254156194916750UL), () => _ufle12jhs77_attachedBuffId2 = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_typeId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _typeId => _ufle12jhs77_typeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(4795856577362119415UL, 2145817804065460140UL), () => _ufle12jhs77_typeId = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_attachedBuffId1;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _attachedBuffId1 => _ufle12jhs77_attachedBuffId1 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(4999027743345007951UL, 8740404057676917415UL), () => _ufle12jhs77_attachedBuffId1 = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_attachedBuffId2;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _attachedBuffId2 => _ufle12jhs77_attachedBuffId2 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(4950158092907260814UL, 17771896160705281467UL), () => _ufle12jhs77_attachedBuffId2 = null);
+		public List<Iono.MasterData.skill> RelatedskillListUsingtargetConditionIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.skill>(Iono.MasterData.skill._targetConditionId, Id);
+		public List<Iono.MasterData.skill> RelatedskillListUsinguserConditionIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.skill>(Iono.MasterData.skill._userConditionId, Id);
+		public List<Iono.MasterData.weather> RelatedweatherListUsingnegatedConditionIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.weather>(Iono.MasterData.weather._negatedConditionId, Id);
+		public List<Iono.MasterData.field> RelatedfieldListUsingnegatedConditionIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.field>(Iono.MasterData.field._negatedConditionId, Id);
 		private static BansheeGz.BGDatabase.BGKey _edeht3sdad33_abnormalconditionKey;
 		public static BansheeGz.BGDatabase.BGKey _abnormalconditionKey => _edeht3sdad33_abnormalconditionKey ??= BGCodeGenUtils.GetKey(MetaDefault, new BGId(4753788300357244029UL, 1291888561239100032UL), () => _edeht3sdad33_abnormalconditionKey = null);
 		private abnormalcondition() : base(MetaDefault) {}
@@ -222,6 +222,10 @@ namespace Iono.MasterData
 		public static abnormalcondition NewEntity() => (abnormalcondition) MetaDefault.NewEntity();
 		public static abnormalcondition NewEntity(BGId entityId) => (abnormalcondition) MetaDefault.NewEntity(entityId);
 		public static abnormalcondition NewEntity(Action<abnormalcondition> callback) => (abnormalcondition) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((abnormalcondition)entity)));
+		public List<Iono.MasterData.skill> FillRelatedskillListUsingtargetConditionIdRelation(List<Iono.MasterData.skill> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.skill>(Iono.MasterData.skill._targetConditionId, Id, result);
+		public List<Iono.MasterData.skill> FillRelatedskillListUsinguserConditionIdRelation(List<Iono.MasterData.skill> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.skill>(Iono.MasterData.skill._userConditionId, Id, result);
+		public List<Iono.MasterData.weather> FillRelatedweatherListUsingnegatedConditionIdRelation(List<Iono.MasterData.weather> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.weather>(Iono.MasterData.weather._negatedConditionId, Id, result);
+		public List<Iono.MasterData.field> FillRelatedfieldListUsingnegatedConditionIdRelation(List<Iono.MasterData.field> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.field>(Iono.MasterData.field._negatedConditionId, Id, result);
 		public static abnormalcondition GetEntityByKeyabnormalconditionKey(System.String conditionId) => (abnormalcondition) _abnormalconditionKey.GetEntityByKey<System.String>(conditionId);
 		public static void InitializeCodeGenRuntime()
 		{
@@ -235,7 +239,6 @@ namespace Iono.MasterData
 			_ufle12jhs77_gender = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5413739509775861411UL, 115234351969011368UL));
 			_ufle12jhs77_tag1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4785134287183922914UL, 7054056355321891475UL));
 			_ufle12jhs77_tag2 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4755590936128731124UL, 4131268378458540949UL));
-			_ufle12jhs77_typeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4994271164916252374UL, 545136052724525219UL));
 			_ufle12jhs77_effectTarget = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5398523903401147669UL, 14869467623333315214UL));
 			_ufle12jhs77_consumeTiming = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4928740288700789031UL, 16336501877368294066UL));
 			_ufle12jhs77_turnCount = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5459838525852887778UL, 11256244214158411175UL));
@@ -251,8 +254,9 @@ namespace Iono.MasterData
 			_ufle12jhs77_burnHpDamageRate = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5385220647853674419UL, 8711410342085636531UL));
 			_ufle12jhs77_burnAtkReduceRate = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4857696108406581367UL, 14963172996642984362UL));
 			_ufle12jhs77_doomTurnCount = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5175033093695105633UL, 13163328294357415613UL));
-			_ufle12jhs77_attachedBuffId1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5636943192004502552UL, 119439268795190715UL));
-			_ufle12jhs77_attachedBuffId2 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4918945830581261863UL, 7821254156194916750UL));
+			_ufle12jhs77_typeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(4795856577362119415UL, 2145817804065460140UL));
+			_ufle12jhs77_attachedBuffId1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(4999027743345007951UL, 8740404057676917415UL));
+			_ufle12jhs77_attachedBuffId2 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(4950158092907260814UL, 17771896160705281467UL));
 			_edeht3sdad33_abnormalconditionKey = BGCodeGenUtils.GetKey(_metaDefault, new BGId(4753788300357244029UL, 1291888561239100032UL));
 		}
 		public static void ReleaseCodeGenRuntime()
@@ -267,7 +271,6 @@ namespace Iono.MasterData
 			_ufle12jhs77_gender = null;
 			_ufle12jhs77_tag1 = null;
 			_ufle12jhs77_tag2 = null;
-			_ufle12jhs77_typeId = null;
 			_ufle12jhs77_effectTarget = null;
 			_ufle12jhs77_consumeTiming = null;
 			_ufle12jhs77_turnCount = null;
@@ -283,6 +286,7 @@ namespace Iono.MasterData
 			_ufle12jhs77_burnHpDamageRate = null;
 			_ufle12jhs77_burnAtkReduceRate = null;
 			_ufle12jhs77_doomTurnCount = null;
+			_ufle12jhs77_typeId = null;
 			_ufle12jhs77_attachedBuffId1 = null;
 			_ufle12jhs77_attachedBuffId2 = null;
 			_edeht3sdad33_abnormalconditionKey = null;
@@ -307,7 +311,6 @@ namespace Iono.MasterData
 			public const string gender = "gender";
 			public const string tag1 = "tag1";
 			public const string tag2 = "tag2";
-			public const string typeId = "typeId";
 			public const string effectTarget = "effectTarget";
 			public const string consumeTiming = "consumeTiming";
 			public const string turnCount = "turnCount";
@@ -323,6 +326,7 @@ namespace Iono.MasterData
 			public const string burnHpDamageRate = "burnHpDamageRate";
 			public const string burnAtkReduceRate = "burnAtkReduceRate";
 			public const string doomTurnCount = "doomTurnCount";
+			public const string typeId = "typeId";
 			public const string attachedBuffId1 = "attachedBuffId1";
 			public const string attachedBuffId2 = "attachedBuffId2";
 			public const string abnormalconditionKey = "abnormalconditionKey";

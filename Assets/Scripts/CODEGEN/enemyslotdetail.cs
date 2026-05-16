@@ -23,36 +23,41 @@ namespace Iono.MasterData
 			get => _name[Index];
 			set => _name[Index] = value;
 		}
-		public System.String skillId
-		{
-			get => _skillId[Index];
-			set => _skillId[Index] = value;
-		}
 		public System.String memo
 		{
 			get => _memo[Index];
 			set => _memo[Index] = value;
 		}
-		public System.String reconFlagId
+		public System.String recon_frag
 		{
-			get => _reconFlagId[Index];
-			set => _reconFlagId[Index] = value;
+			get => _recon_frag[Index];
+			set => _recon_frag[Index] = value;
 		}
 		public System.String enemyslotId
 		{
 			get => _enemyslotId[Index];
 			set => _enemyslotId[Index] = value;
 		}
+		public skill skillId
+		{
+			get => (skill) _skillId[Index];
+			set => _skillId[Index] = value;
+		}
 		private static BansheeGz.BGDatabase.BGFieldEntityName _ufle12jhs77_name;
 		public static BansheeGz.BGDatabase.BGFieldEntityName _name => _ufle12jhs77_name ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(MetaDefault, new BGId(5402286177552199299UL, 6733892289240205443UL), () => _ufle12jhs77_name = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_skillId;
-		public static BansheeGz.BGDatabase.BGFieldString _skillId => _ufle12jhs77_skillId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5734644989201530749UL, 15225169235875993235UL), () => _ufle12jhs77_skillId = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_memo;
 		public static BansheeGz.BGDatabase.BGFieldString _memo => _ufle12jhs77_memo ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5520669255016850248UL, 17413153774078563485UL), () => _ufle12jhs77_memo = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_reconFlagId;
-		public static BansheeGz.BGDatabase.BGFieldString _reconFlagId => _ufle12jhs77_reconFlagId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5577011547542091596UL, 18305501518055447230UL), () => _ufle12jhs77_reconFlagId = null);
+		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_recon_frag;
+		public static BansheeGz.BGDatabase.BGFieldString _recon_frag => _ufle12jhs77_recon_frag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5577011547542091596UL, 18305501518055447230UL), () => _ufle12jhs77_recon_frag = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_enemyslotId;
 		public static BansheeGz.BGDatabase.BGFieldString _enemyslotId => _ufle12jhs77_enemyslotId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5241983390952653641UL, 14615359806695301039UL), () => _ufle12jhs77_enemyslotId = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_skillId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _skillId => _ufle12jhs77_skillId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5361166575245845828UL, 2478675489350083223UL), () => _ufle12jhs77_skillId = null);
+		public List<Iono.MasterData.enemypattern> RelatedenemypatternListUsingslotId_1Relation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemypattern>(Iono.MasterData.enemypattern._slotId_1, Id);
+		public List<Iono.MasterData.enemypattern> RelatedenemypatternListUsingslotId_2Relation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemypattern>(Iono.MasterData.enemypattern._slotId_2, Id);
+		public List<Iono.MasterData.enemypattern> RelatedenemypatternListUsingslotId_3Relation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemypattern>(Iono.MasterData.enemypattern._slotId_3, Id);
+		public List<Iono.MasterData.enemypattern> RelatedenemypatternListUsingslotId_4Relation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemypattern>(Iono.MasterData.enemypattern._slotId_4, Id);
+		public List<Iono.MasterData.enemypattern> RelatedenemypatternListUsingslotId_5Relation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemypattern>(Iono.MasterData.enemypattern._slotId_5, Id);
 		private static BansheeGz.BGDatabase.BGKey _edeht3sdad33_enemyslotKey;
 		public static BansheeGz.BGDatabase.BGKey _enemyslotKey => _edeht3sdad33_enemyslotKey ??= BGCodeGenUtils.GetKey(MetaDefault, new BGId(5440094805292329809UL, 17585278008490142UL), () => _edeht3sdad33_enemyslotKey = null);
 		private enemyslotdetail() : base(MetaDefault) {}
@@ -68,25 +73,30 @@ namespace Iono.MasterData
 		public static enemyslotdetail NewEntity() => (enemyslotdetail) MetaDefault.NewEntity();
 		public static enemyslotdetail NewEntity(BGId entityId) => (enemyslotdetail) MetaDefault.NewEntity(entityId);
 		public static enemyslotdetail NewEntity(Action<enemyslotdetail> callback) => (enemyslotdetail) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((enemyslotdetail)entity)));
+		public List<Iono.MasterData.enemypattern> FillRelatedenemypatternListUsingslotId_1Relation(List<Iono.MasterData.enemypattern> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemypattern>(Iono.MasterData.enemypattern._slotId_1, Id, result);
+		public List<Iono.MasterData.enemypattern> FillRelatedenemypatternListUsingslotId_2Relation(List<Iono.MasterData.enemypattern> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemypattern>(Iono.MasterData.enemypattern._slotId_2, Id, result);
+		public List<Iono.MasterData.enemypattern> FillRelatedenemypatternListUsingslotId_3Relation(List<Iono.MasterData.enemypattern> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemypattern>(Iono.MasterData.enemypattern._slotId_3, Id, result);
+		public List<Iono.MasterData.enemypattern> FillRelatedenemypatternListUsingslotId_4Relation(List<Iono.MasterData.enemypattern> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemypattern>(Iono.MasterData.enemypattern._slotId_4, Id, result);
+		public List<Iono.MasterData.enemypattern> FillRelatedenemypatternListUsingslotId_5Relation(List<Iono.MasterData.enemypattern> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemypattern>(Iono.MasterData.enemypattern._slotId_5, Id, result);
 		public static enemyslotdetail GetEntityByKeyenemyslotKey(System.String enemyslotId) => (enemyslotdetail) _enemyslotKey.GetEntityByKey<System.String>(enemyslotId);
 		public static void InitializeCodeGenRuntime()
 		{
 			_metaDefault = BGCodeGenUtils.GetMeta<BansheeGz.BGDatabase.BGMetaRow>(new BGId(5348329999930997860UL,17449553450287559326UL), ReleaseCodeGenRuntime);
 			_ufle12jhs77_name = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(_metaDefault, new BGId(5402286177552199299UL, 6733892289240205443UL));
-			_ufle12jhs77_skillId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5734644989201530749UL, 15225169235875993235UL));
 			_ufle12jhs77_memo = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5520669255016850248UL, 17413153774078563485UL));
-			_ufle12jhs77_reconFlagId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5577011547542091596UL, 18305501518055447230UL));
+			_ufle12jhs77_recon_frag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5577011547542091596UL, 18305501518055447230UL));
 			_ufle12jhs77_enemyslotId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5241983390952653641UL, 14615359806695301039UL));
+			_ufle12jhs77_skillId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5361166575245845828UL, 2478675489350083223UL));
 			_edeht3sdad33_enemyslotKey = BGCodeGenUtils.GetKey(_metaDefault, new BGId(5440094805292329809UL, 17585278008490142UL));
 		}
 		public static void ReleaseCodeGenRuntime()
 		{
 			_metaDefault = null;
 			_ufle12jhs77_name = null;
-			_ufle12jhs77_skillId = null;
 			_ufle12jhs77_memo = null;
-			_ufle12jhs77_reconFlagId = null;
+			_ufle12jhs77_recon_frag = null;
 			_ufle12jhs77_enemyslotId = null;
+			_ufle12jhs77_skillId = null;
 			_edeht3sdad33_enemyslotKey = null;
 		}
 
@@ -101,10 +111,10 @@ namespace Iono.MasterData
 		{
 			public const string Meta = "enemyslotdetail";
 			public const string name = "name";
-			public const string skillId = "skillId";
 			public const string memo = "memo";
-			public const string reconFlagId = "reconFlagId";
+			public const string recon_frag = "recon_frag";
 			public const string enemyslotId = "enemyslotId";
+			public const string skillId = "skillId";
 			public const string enemyslotKey = "enemyslotKey";
 		}
 	}

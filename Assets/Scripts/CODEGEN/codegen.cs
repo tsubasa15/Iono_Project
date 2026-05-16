@@ -33,6 +33,7 @@ namespace Iono.MasterData
 			buffdebuff.InitializeCodeGenRuntime();
 			abnormalcondition.InitializeCodeGenRuntime();
 			specialeffect.InitializeCodeGenRuntime();
+			inventory.InitializeCodeGenRuntime();
 		}
 		[Preserve]
 		public static void ReleaseCodeGenRuntime()
@@ -53,6 +54,7 @@ namespace Iono.MasterData
 			buffdebuff.ReleaseCodeGenRuntime();
 			abnormalcondition.ReleaseCodeGenRuntime();
 			specialeffect.ReleaseCodeGenRuntime();
+			inventory.ReleaseCodeGenRuntime();
 		}
 	}
 }

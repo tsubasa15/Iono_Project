@@ -33,40 +33,20 @@ namespace Iono.MasterData
 			get => _memo[Index];
 			set => _memo[Index] = value;
 		}
-		public System.String plusDamageTypeId
-		{
-			get => _plusDamageTypeId[Index];
-			set => _plusDamageTypeId[Index] = value;
-		}
 		public System.Int32 plusDamageRate
 		{
 			get => _plusDamageRate[Index];
 			set => _plusDamageRate.SetValue(this, value);
-		}
-		public System.String minusDamageTypeId
-		{
-			get => _minusDamageTypeId[Index];
-			set => _minusDamageTypeId[Index] = value;
 		}
 		public System.Int32 minusDamageRate
 		{
 			get => _minusDamageRate[Index];
 			set => _minusDamageRate.SetValue(this, value);
 		}
-		public System.String buffDefTypeId
-		{
-			get => _buffDefTypeId[Index];
-			set => _buffDefTypeId[Index] = value;
-		}
 		public System.Int32 buffDefRate
 		{
 			get => _buffDefRate[Index];
 			set => _buffDefRate.SetValue(this, value);
-		}
-		public System.String buffSpDefTypeId
-		{
-			get => _buffSpDefTypeId[Index];
-			set => _buffSpDefTypeId[Index] = value;
 		}
 		public System.Int32 buffSpDefRate
 		{
@@ -83,32 +63,73 @@ namespace Iono.MasterData
 			get => _duration[Index];
 			set => _duration.SetValue(this, value);
 		}
+		public List<type> slipDamageImmuneTypeId
+		{
+			get => BGCodeGenUtils.MultipleRelationGet<type>(_slipDamageImmuneTypeId, Index);
+			set => BGCodeGenUtils.MultipleRelationSet<type>(_slipDamageImmuneTypeId, Index, value);
+		}
+		public abnormalcondition negatedConditionId
+		{
+			get => (abnormalcondition) _negatedConditionId[Index];
+			set => _negatedConditionId[Index] = value;
+		}
+		public type plusDamageTypeId
+		{
+			get => (type) _plusDamageTypeId[Index];
+			set => _plusDamageTypeId[Index] = value;
+		}
+		public type minusDamageTypeId
+		{
+			get => (type) _minusDamageTypeId[Index];
+			set => _minusDamageTypeId[Index] = value;
+		}
+		public type buffDefTypeId
+		{
+			get => (type) _buffDefTypeId[Index];
+			set => _buffDefTypeId[Index] = value;
+		}
+		public type buffSpDefTypeId
+		{
+			get => (type) _buffSpDefTypeId[Index];
+			set => _buffSpDefTypeId[Index] = value;
+		}
+		public System.Int32 slipDamageRate
+		{
+			get => _slipDamageRate[Index];
+			set => _slipDamageRate.SetValue(this, value);
+		}
 		private static BansheeGz.BGDatabase.BGFieldEntityName _ufle12jhs77_name;
 		public static BansheeGz.BGDatabase.BGFieldEntityName _name => _ufle12jhs77_name ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(MetaDefault, new BGId(4900608562998451283UL, 11978418670060980354UL), () => _ufle12jhs77_name = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_weatherId;
 		public static BansheeGz.BGDatabase.BGFieldString _weatherId => _ufle12jhs77_weatherId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5101677993661338085UL, 5623031162223862945UL), () => _ufle12jhs77_weatherId = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_memo;
 		public static BansheeGz.BGDatabase.BGFieldString _memo => _ufle12jhs77_memo ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5386797526636819561UL, 9599556358137966488UL), () => _ufle12jhs77_memo = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_plusDamageTypeId;
-		public static BansheeGz.BGDatabase.BGFieldString _plusDamageTypeId => _ufle12jhs77_plusDamageTypeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5637052128591219933UL, 16944481944892454321UL), () => _ufle12jhs77_plusDamageTypeId = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_plusDamageRate;
 		public static BansheeGz.BGDatabase.BGFieldInt _plusDamageRate => _ufle12jhs77_plusDamageRate ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4680545725121556465UL, 5907405555879753100UL), () => _ufle12jhs77_plusDamageRate = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_minusDamageTypeId;
-		public static BansheeGz.BGDatabase.BGFieldString _minusDamageTypeId => _ufle12jhs77_minusDamageTypeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5744388785283715568UL, 18153678707519077530UL), () => _ufle12jhs77_minusDamageTypeId = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_minusDamageRate;
 		public static BansheeGz.BGDatabase.BGFieldInt _minusDamageRate => _ufle12jhs77_minusDamageRate ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5276345372805981253UL, 1420052544030531743UL), () => _ufle12jhs77_minusDamageRate = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_buffDefTypeId;
-		public static BansheeGz.BGDatabase.BGFieldString _buffDefTypeId => _ufle12jhs77_buffDefTypeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4840920060974825151UL, 8237230245651257522UL), () => _ufle12jhs77_buffDefTypeId = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_buffDefRate;
 		public static BansheeGz.BGDatabase.BGFieldInt _buffDefRate => _ufle12jhs77_buffDefRate ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4657119843990066785UL, 16567235588562624128UL), () => _ufle12jhs77_buffDefRate = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_buffSpDefTypeId;
-		public static BansheeGz.BGDatabase.BGFieldString _buffSpDefTypeId => _ufle12jhs77_buffSpDefTypeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4732757755815035382UL, 11313169859207534733UL), () => _ufle12jhs77_buffSpDefTypeId = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_buffSpDefRate;
 		public static BansheeGz.BGDatabase.BGFieldInt _buffSpDefRate => _ufle12jhs77_buffSpDefRate ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5479299770477224783UL, 12700068746749236887UL), () => _ufle12jhs77_buffSpDefRate = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_preventOverwriteFlag;
 		public static BansheeGz.BGDatabase.BGFieldString _preventOverwriteFlag => _ufle12jhs77_preventOverwriteFlag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5037292001103353390UL, 12429754838513811126UL), () => _ufle12jhs77_preventOverwriteFlag = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_duration;
 		public static BansheeGz.BGDatabase.BGFieldInt _duration => _ufle12jhs77_duration ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5289363814441252516UL, 16686849108738899093UL), () => _ufle12jhs77_duration = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationMultiple _ufle12jhs77_slipDamageImmuneTypeId;
+		public static BansheeGz.BGDatabase.BGFieldRelationMultiple _slipDamageImmuneTypeId => _ufle12jhs77_slipDamageImmuneTypeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationMultiple>(MetaDefault, new BGId(5681769700527614141UL, 7333029601800315035UL), () => _ufle12jhs77_slipDamageImmuneTypeId = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_negatedConditionId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _negatedConditionId => _ufle12jhs77_negatedConditionId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5037919575277987128UL, 9517910837982460078UL), () => _ufle12jhs77_negatedConditionId = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_plusDamageTypeId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _plusDamageTypeId => _ufle12jhs77_plusDamageTypeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5675242606317988093UL, 6890305797839790269UL), () => _ufle12jhs77_plusDamageTypeId = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_minusDamageTypeId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _minusDamageTypeId => _ufle12jhs77_minusDamageTypeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5355682983611306579UL, 249916760495377588UL), () => _ufle12jhs77_minusDamageTypeId = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_buffDefTypeId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _buffDefTypeId => _ufle12jhs77_buffDefTypeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5560322958886766730UL, 18254478551350554808UL), () => _ufle12jhs77_buffDefTypeId = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_buffSpDefTypeId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _buffSpDefTypeId => _ufle12jhs77_buffSpDefTypeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(4691630588862402025UL, 1687125782866940297UL), () => _ufle12jhs77_buffSpDefTypeId = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_slipDamageRate;
+		public static BansheeGz.BGDatabase.BGFieldInt _slipDamageRate => _ufle12jhs77_slipDamageRate ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5103262840517904953UL, 2825554919171458189UL), () => _ufle12jhs77_slipDamageRate = null);
 		private static BansheeGz.BGDatabase.BGKey _edeht3sdad33_weatherKey;
 		public static BansheeGz.BGDatabase.BGKey _weatherKey => _edeht3sdad33_weatherKey ??= BGCodeGenUtils.GetKey(MetaDefault, new BGId(4928850703612081501UL, 4439186842595367077UL), () => _edeht3sdad33_weatherKey = null);
 		private weather() : base(MetaDefault) {}
@@ -124,6 +145,9 @@ namespace Iono.MasterData
 		public static weather NewEntity() => (weather) MetaDefault.NewEntity();
 		public static weather NewEntity(BGId entityId) => (weather) MetaDefault.NewEntity(entityId);
 		public static weather NewEntity(Action<weather> callback) => (weather) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((weather)entity)));
+		public void slipDamageImmuneTypeId_Add(type related) => BGCodeGenUtils.MultipleRelationAdd(_slipDamageImmuneTypeId, Index, related);
+		public void slipDamageImmuneTypeId_Remove(type related) => BGCodeGenUtils.MultipleRelationRemove(_slipDamageImmuneTypeId, Index, related);
+		public List<type> FillslipDamageImmuneTypeId(List<type> result) => BGCodeGenUtils.MultipleRelationGet<type>(_slipDamageImmuneTypeId, Index, result);
 		public static weather GetEntityByKeyweatherKey(System.String weatherId) => (weather) _weatherKey.GetEntityByKey<System.String>(weatherId);
 		public static void InitializeCodeGenRuntime()
 		{
@@ -131,16 +155,19 @@ namespace Iono.MasterData
 			_ufle12jhs77_name = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(_metaDefault, new BGId(4900608562998451283UL, 11978418670060980354UL));
 			_ufle12jhs77_weatherId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5101677993661338085UL, 5623031162223862945UL));
 			_ufle12jhs77_memo = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5386797526636819561UL, 9599556358137966488UL));
-			_ufle12jhs77_plusDamageTypeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5637052128591219933UL, 16944481944892454321UL));
 			_ufle12jhs77_plusDamageRate = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4680545725121556465UL, 5907405555879753100UL));
-			_ufle12jhs77_minusDamageTypeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5744388785283715568UL, 18153678707519077530UL));
 			_ufle12jhs77_minusDamageRate = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5276345372805981253UL, 1420052544030531743UL));
-			_ufle12jhs77_buffDefTypeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4840920060974825151UL, 8237230245651257522UL));
 			_ufle12jhs77_buffDefRate = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4657119843990066785UL, 16567235588562624128UL));
-			_ufle12jhs77_buffSpDefTypeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4732757755815035382UL, 11313169859207534733UL));
 			_ufle12jhs77_buffSpDefRate = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5479299770477224783UL, 12700068746749236887UL));
 			_ufle12jhs77_preventOverwriteFlag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5037292001103353390UL, 12429754838513811126UL));
 			_ufle12jhs77_duration = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5289363814441252516UL, 16686849108738899093UL));
+			_ufle12jhs77_slipDamageImmuneTypeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationMultiple>(_metaDefault, new BGId(5681769700527614141UL, 7333029601800315035UL));
+			_ufle12jhs77_negatedConditionId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5037919575277987128UL, 9517910837982460078UL));
+			_ufle12jhs77_plusDamageTypeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5675242606317988093UL, 6890305797839790269UL));
+			_ufle12jhs77_minusDamageTypeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5355682983611306579UL, 249916760495377588UL));
+			_ufle12jhs77_buffDefTypeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5560322958886766730UL, 18254478551350554808UL));
+			_ufle12jhs77_buffSpDefTypeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(4691630588862402025UL, 1687125782866940297UL));
+			_ufle12jhs77_slipDamageRate = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5103262840517904953UL, 2825554919171458189UL));
 			_edeht3sdad33_weatherKey = BGCodeGenUtils.GetKey(_metaDefault, new BGId(4928850703612081501UL, 4439186842595367077UL));
 		}
 		public static void ReleaseCodeGenRuntime()
@@ -149,16 +176,19 @@ namespace Iono.MasterData
 			_ufle12jhs77_name = null;
 			_ufle12jhs77_weatherId = null;
 			_ufle12jhs77_memo = null;
-			_ufle12jhs77_plusDamageTypeId = null;
 			_ufle12jhs77_plusDamageRate = null;
-			_ufle12jhs77_minusDamageTypeId = null;
 			_ufle12jhs77_minusDamageRate = null;
-			_ufle12jhs77_buffDefTypeId = null;
 			_ufle12jhs77_buffDefRate = null;
-			_ufle12jhs77_buffSpDefTypeId = null;
 			_ufle12jhs77_buffSpDefRate = null;
 			_ufle12jhs77_preventOverwriteFlag = null;
 			_ufle12jhs77_duration = null;
+			_ufle12jhs77_slipDamageImmuneTypeId = null;
+			_ufle12jhs77_negatedConditionId = null;
+			_ufle12jhs77_plusDamageTypeId = null;
+			_ufle12jhs77_minusDamageTypeId = null;
+			_ufle12jhs77_buffDefTypeId = null;
+			_ufle12jhs77_buffSpDefTypeId = null;
+			_ufle12jhs77_slipDamageRate = null;
 			_edeht3sdad33_weatherKey = null;
 		}
 
@@ -175,16 +205,19 @@ namespace Iono.MasterData
 			public const string name = "name";
 			public const string weatherId = "weatherId";
 			public const string memo = "memo";
-			public const string plusDamageTypeId = "plusDamageTypeId";
 			public const string plusDamageRate = "plusDamageRate";
-			public const string minusDamageTypeId = "minusDamageTypeId";
 			public const string minusDamageRate = "minusDamageRate";
-			public const string buffDefTypeId = "buffDefTypeId";
 			public const string buffDefRate = "buffDefRate";
-			public const string buffSpDefTypeId = "buffSpDefTypeId";
 			public const string buffSpDefRate = "buffSpDefRate";
 			public const string preventOverwriteFlag = "preventOverwriteFlag";
 			public const string duration = "duration";
+			public const string slipDamageImmuneTypeId = "slipDamageImmuneTypeId";
+			public const string negatedConditionId = "negatedConditionId";
+			public const string plusDamageTypeId = "plusDamageTypeId";
+			public const string minusDamageTypeId = "minusDamageTypeId";
+			public const string buffDefTypeId = "buffDefTypeId";
+			public const string buffSpDefTypeId = "buffSpDefTypeId";
+			public const string slipDamageRate = "slipDamageRate";
 			public const string weatherKey = "weatherKey";
 		}
 	}

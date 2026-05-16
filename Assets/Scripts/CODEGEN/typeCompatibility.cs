@@ -28,136 +28,136 @@ namespace Iono.MasterData
 			get => _typeId[Index];
 			set => _typeId[Index] = value;
 		}
-		public System.Int32 typeNormal
+		public System.Int32 type_Normal
 		{
-			get => _typeNormal[Index];
-			set => _typeNormal.SetValue(this, value);
+			get => _type_Normal[Index];
+			set => _type_Normal.SetValue(this, value);
 		}
-		public System.Int32 typeFire
+		public System.Int32 type_Fire
 		{
-			get => _typeFire[Index];
-			set => _typeFire.SetValue(this, value);
+			get => _type_Fire[Index];
+			set => _type_Fire.SetValue(this, value);
 		}
-		public System.Int32 typeWater
+		public System.Int32 type_Water
 		{
-			get => _typeWater[Index];
-			set => _typeWater.SetValue(this, value);
+			get => _type_Water[Index];
+			set => _type_Water.SetValue(this, value);
 		}
-		public System.Int32 typeElectric
+		public System.Int32 type_Electric
 		{
-			get => _typeElectric[Index];
-			set => _typeElectric.SetValue(this, value);
+			get => _type_Electric[Index];
+			set => _type_Electric.SetValue(this, value);
 		}
-		public System.Int32 typeGrass
+		public System.Int32 type_Grass
 		{
-			get => _typeGrass[Index];
-			set => _typeGrass.SetValue(this, value);
+			get => _type_Grass[Index];
+			set => _type_Grass.SetValue(this, value);
 		}
-		public System.Int32 typeIce
+		public System.Int32 type_Ice
 		{
-			get => _typeIce[Index];
-			set => _typeIce.SetValue(this, value);
+			get => _type_Ice[Index];
+			set => _type_Ice.SetValue(this, value);
 		}
-		public System.Int32 typeFighting
+		public System.Int32 type_Fighting
 		{
-			get => _typeFighting[Index];
-			set => _typeFighting.SetValue(this, value);
+			get => _type_Fighting[Index];
+			set => _type_Fighting.SetValue(this, value);
 		}
-		public System.Int32 typePoison
+		public System.Int32 type_Poison
 		{
-			get => _typePoison[Index];
-			set => _typePoison.SetValue(this, value);
+			get => _type_Poison[Index];
+			set => _type_Poison.SetValue(this, value);
 		}
-		public System.Int32 typeGround
+		public System.Int32 type_Ground
 		{
-			get => _typeGround[Index];
-			set => _typeGround.SetValue(this, value);
+			get => _type_Ground[Index];
+			set => _type_Ground.SetValue(this, value);
 		}
-		public System.Int32 typeFlying
+		public System.Int32 type_Flying
 		{
-			get => _typeFlying[Index];
-			set => _typeFlying.SetValue(this, value);
+			get => _type_Flying[Index];
+			set => _type_Flying.SetValue(this, value);
 		}
-		public System.Int32 typePsychic
+		public System.Int32 type_Psychic
 		{
-			get => _typePsychic[Index];
-			set => _typePsychic.SetValue(this, value);
+			get => _type_Psychic[Index];
+			set => _type_Psychic.SetValue(this, value);
 		}
-		public System.Int32 typeBug
+		public System.Int32 type_Bug
 		{
-			get => _typeBug[Index];
-			set => _typeBug.SetValue(this, value);
+			get => _type_Bug[Index];
+			set => _type_Bug.SetValue(this, value);
 		}
-		public System.Int32 typeRock
+		public System.Int32 type_Rock
 		{
-			get => _typeRock[Index];
-			set => _typeRock.SetValue(this, value);
+			get => _type_Rock[Index];
+			set => _type_Rock.SetValue(this, value);
 		}
-		public System.Int32 typeGhost
+		public System.Int32 type_Ghost
 		{
-			get => _typeGhost[Index];
-			set => _typeGhost.SetValue(this, value);
+			get => _type_Ghost[Index];
+			set => _type_Ghost.SetValue(this, value);
 		}
-		public System.Int32 typeDragon
+		public System.Int32 type_Dragon
 		{
-			get => _typeDragon[Index];
-			set => _typeDragon.SetValue(this, value);
+			get => _type_Dragon[Index];
+			set => _type_Dragon.SetValue(this, value);
 		}
-		public System.Int32 typeDark
+		public System.Int32 type_Dark
 		{
-			get => _typeDark[Index];
-			set => _typeDark.SetValue(this, value);
+			get => _type_Dark[Index];
+			set => _type_Dark.SetValue(this, value);
 		}
-		public System.Int32 typeSteel
+		public System.Int32 type_Steel
 		{
-			get => _typeSteel[Index];
-			set => _typeSteel.SetValue(this, value);
+			get => _type_Steel[Index];
+			set => _type_Steel.SetValue(this, value);
 		}
-		public System.Int32 typeFairy
+		public System.Int32 type_Fairy
 		{
-			get => _typeFairy[Index];
-			set => _typeFairy.SetValue(this, value);
+			get => _type_Fairy[Index];
+			set => _type_Fairy.SetValue(this, value);
 		}
 		private static BansheeGz.BGDatabase.BGFieldEntityName _ufle12jhs77_name;
 		public static BansheeGz.BGDatabase.BGFieldEntityName _name => _ufle12jhs77_name ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(MetaDefault, new BGId(4614120048838770181UL, 9182269960505153694UL), () => _ufle12jhs77_name = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_typeId;
 		public static BansheeGz.BGDatabase.BGFieldString _typeId => _ufle12jhs77_typeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5487992311467773535UL, 3658109906724506270UL), () => _ufle12jhs77_typeId = null);
-		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_typeNormal;
-		public static BansheeGz.BGDatabase.BGFieldInt _typeNormal => _ufle12jhs77_typeNormal ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5263641030187492072UL, 1557598411138583432UL), () => _ufle12jhs77_typeNormal = null);
-		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_typeFire;
-		public static BansheeGz.BGDatabase.BGFieldInt _typeFire => _ufle12jhs77_typeFire ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4626478563673274391UL, 17305593359083548058UL), () => _ufle12jhs77_typeFire = null);
-		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_typeWater;
-		public static BansheeGz.BGDatabase.BGFieldInt _typeWater => _ufle12jhs77_typeWater ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5422153042225921787UL, 1927153451905170338UL), () => _ufle12jhs77_typeWater = null);
-		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_typeElectric;
-		public static BansheeGz.BGDatabase.BGFieldInt _typeElectric => _ufle12jhs77_typeElectric ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4953182388322203509UL, 5779914060623339689UL), () => _ufle12jhs77_typeElectric = null);
-		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_typeGrass;
-		public static BansheeGz.BGDatabase.BGFieldInt _typeGrass => _ufle12jhs77_typeGrass ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5306776043533224922UL, 5992270903673769394UL), () => _ufle12jhs77_typeGrass = null);
-		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_typeIce;
-		public static BansheeGz.BGDatabase.BGFieldInt _typeIce => _ufle12jhs77_typeIce ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5738472233180683205UL, 12230920567929529519UL), () => _ufle12jhs77_typeIce = null);
-		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_typeFighting;
-		public static BansheeGz.BGDatabase.BGFieldInt _typeFighting => _ufle12jhs77_typeFighting ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4759298436964166315UL, 3818705429383687862UL), () => _ufle12jhs77_typeFighting = null);
-		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_typePoison;
-		public static BansheeGz.BGDatabase.BGFieldInt _typePoison => _ufle12jhs77_typePoison ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5545442699261356991UL, 6876891155226281366UL), () => _ufle12jhs77_typePoison = null);
-		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_typeGround;
-		public static BansheeGz.BGDatabase.BGFieldInt _typeGround => _ufle12jhs77_typeGround ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5189787413586165869UL, 6846777815896518058UL), () => _ufle12jhs77_typeGround = null);
-		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_typeFlying;
-		public static BansheeGz.BGDatabase.BGFieldInt _typeFlying => _ufle12jhs77_typeFlying ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4949596983316111133UL, 16687354416484181647UL), () => _ufle12jhs77_typeFlying = null);
-		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_typePsychic;
-		public static BansheeGz.BGDatabase.BGFieldInt _typePsychic => _ufle12jhs77_typePsychic ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4746593253453674518UL, 18245615560319760047UL), () => _ufle12jhs77_typePsychic = null);
-		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_typeBug;
-		public static BansheeGz.BGDatabase.BGFieldInt _typeBug => _ufle12jhs77_typeBug ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5205382101776561411UL, 17982494269893299604UL), () => _ufle12jhs77_typeBug = null);
-		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_typeRock;
-		public static BansheeGz.BGDatabase.BGFieldInt _typeRock => _ufle12jhs77_typeRock ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5217412554646600456UL, 8358844179238720649UL), () => _ufle12jhs77_typeRock = null);
-		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_typeGhost;
-		public static BansheeGz.BGDatabase.BGFieldInt _typeGhost => _ufle12jhs77_typeGhost ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5214187285417918631UL, 9509363925377190808UL), () => _ufle12jhs77_typeGhost = null);
-		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_typeDragon;
-		public static BansheeGz.BGDatabase.BGFieldInt _typeDragon => _ufle12jhs77_typeDragon ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5370164547221752111UL, 10716875351815048322UL), () => _ufle12jhs77_typeDragon = null);
-		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_typeDark;
-		public static BansheeGz.BGDatabase.BGFieldInt _typeDark => _ufle12jhs77_typeDark ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5151899037259993337UL, 122929668456730277UL), () => _ufle12jhs77_typeDark = null);
-		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_typeSteel;
-		public static BansheeGz.BGDatabase.BGFieldInt _typeSteel => _ufle12jhs77_typeSteel ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4971369248438536954UL, 7940383754764567173UL), () => _ufle12jhs77_typeSteel = null);
-		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_typeFairy;
-		public static BansheeGz.BGDatabase.BGFieldInt _typeFairy => _ufle12jhs77_typeFairy ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5079779118585905173UL, 7314807089545377433UL), () => _ufle12jhs77_typeFairy = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_type_Normal;
+		public static BansheeGz.BGDatabase.BGFieldInt _type_Normal => _ufle12jhs77_type_Normal ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5263641030187492072UL, 1557598411138583432UL), () => _ufle12jhs77_type_Normal = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_type_Fire;
+		public static BansheeGz.BGDatabase.BGFieldInt _type_Fire => _ufle12jhs77_type_Fire ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4626478563673274391UL, 17305593359083548058UL), () => _ufle12jhs77_type_Fire = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_type_Water;
+		public static BansheeGz.BGDatabase.BGFieldInt _type_Water => _ufle12jhs77_type_Water ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5422153042225921787UL, 1927153451905170338UL), () => _ufle12jhs77_type_Water = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_type_Electric;
+		public static BansheeGz.BGDatabase.BGFieldInt _type_Electric => _ufle12jhs77_type_Electric ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4953182388322203509UL, 5779914060623339689UL), () => _ufle12jhs77_type_Electric = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_type_Grass;
+		public static BansheeGz.BGDatabase.BGFieldInt _type_Grass => _ufle12jhs77_type_Grass ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5306776043533224922UL, 5992270903673769394UL), () => _ufle12jhs77_type_Grass = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_type_Ice;
+		public static BansheeGz.BGDatabase.BGFieldInt _type_Ice => _ufle12jhs77_type_Ice ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5738472233180683205UL, 12230920567929529519UL), () => _ufle12jhs77_type_Ice = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_type_Fighting;
+		public static BansheeGz.BGDatabase.BGFieldInt _type_Fighting => _ufle12jhs77_type_Fighting ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4759298436964166315UL, 3818705429383687862UL), () => _ufle12jhs77_type_Fighting = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_type_Poison;
+		public static BansheeGz.BGDatabase.BGFieldInt _type_Poison => _ufle12jhs77_type_Poison ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5545442699261356991UL, 6876891155226281366UL), () => _ufle12jhs77_type_Poison = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_type_Ground;
+		public static BansheeGz.BGDatabase.BGFieldInt _type_Ground => _ufle12jhs77_type_Ground ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5189787413586165869UL, 6846777815896518058UL), () => _ufle12jhs77_type_Ground = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_type_Flying;
+		public static BansheeGz.BGDatabase.BGFieldInt _type_Flying => _ufle12jhs77_type_Flying ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4949596983316111133UL, 16687354416484181647UL), () => _ufle12jhs77_type_Flying = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_type_Psychic;
+		public static BansheeGz.BGDatabase.BGFieldInt _type_Psychic => _ufle12jhs77_type_Psychic ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4746593253453674518UL, 18245615560319760047UL), () => _ufle12jhs77_type_Psychic = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_type_Bug;
+		public static BansheeGz.BGDatabase.BGFieldInt _type_Bug => _ufle12jhs77_type_Bug ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5205382101776561411UL, 17982494269893299604UL), () => _ufle12jhs77_type_Bug = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_type_Rock;
+		public static BansheeGz.BGDatabase.BGFieldInt _type_Rock => _ufle12jhs77_type_Rock ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5217412554646600456UL, 8358844179238720649UL), () => _ufle12jhs77_type_Rock = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_type_Ghost;
+		public static BansheeGz.BGDatabase.BGFieldInt _type_Ghost => _ufle12jhs77_type_Ghost ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5214187285417918631UL, 9509363925377190808UL), () => _ufle12jhs77_type_Ghost = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_type_Dragon;
+		public static BansheeGz.BGDatabase.BGFieldInt _type_Dragon => _ufle12jhs77_type_Dragon ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5370164547221752111UL, 10716875351815048322UL), () => _ufle12jhs77_type_Dragon = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_type_Dark;
+		public static BansheeGz.BGDatabase.BGFieldInt _type_Dark => _ufle12jhs77_type_Dark ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5151899037259993337UL, 122929668456730277UL), () => _ufle12jhs77_type_Dark = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_type_Steel;
+		public static BansheeGz.BGDatabase.BGFieldInt _type_Steel => _ufle12jhs77_type_Steel ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4971369248438536954UL, 7940383754764567173UL), () => _ufle12jhs77_type_Steel = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_type_Fairy;
+		public static BansheeGz.BGDatabase.BGFieldInt _type_Fairy => _ufle12jhs77_type_Fairy ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5079779118585905173UL, 7314807089545377433UL), () => _ufle12jhs77_type_Fairy = null);
 		private typeCompatibility() : base(MetaDefault) {}
 		private typeCompatibility(BGId id) : base(MetaDefault, id) {}
 		private typeCompatibility(BGMetaEntity meta) : base(meta) {}
@@ -176,48 +176,48 @@ namespace Iono.MasterData
 			_metaDefault = BGCodeGenUtils.GetMeta<BansheeGz.BGDatabase.BGMetaRow>(new BGId(5224719057282907180UL,6201329996867995580UL), ReleaseCodeGenRuntime);
 			_ufle12jhs77_name = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(_metaDefault, new BGId(4614120048838770181UL, 9182269960505153694UL));
 			_ufle12jhs77_typeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5487992311467773535UL, 3658109906724506270UL));
-			_ufle12jhs77_typeNormal = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5263641030187492072UL, 1557598411138583432UL));
-			_ufle12jhs77_typeFire = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4626478563673274391UL, 17305593359083548058UL));
-			_ufle12jhs77_typeWater = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5422153042225921787UL, 1927153451905170338UL));
-			_ufle12jhs77_typeElectric = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4953182388322203509UL, 5779914060623339689UL));
-			_ufle12jhs77_typeGrass = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5306776043533224922UL, 5992270903673769394UL));
-			_ufle12jhs77_typeIce = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5738472233180683205UL, 12230920567929529519UL));
-			_ufle12jhs77_typeFighting = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4759298436964166315UL, 3818705429383687862UL));
-			_ufle12jhs77_typePoison = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5545442699261356991UL, 6876891155226281366UL));
-			_ufle12jhs77_typeGround = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5189787413586165869UL, 6846777815896518058UL));
-			_ufle12jhs77_typeFlying = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4949596983316111133UL, 16687354416484181647UL));
-			_ufle12jhs77_typePsychic = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4746593253453674518UL, 18245615560319760047UL));
-			_ufle12jhs77_typeBug = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5205382101776561411UL, 17982494269893299604UL));
-			_ufle12jhs77_typeRock = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5217412554646600456UL, 8358844179238720649UL));
-			_ufle12jhs77_typeGhost = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5214187285417918631UL, 9509363925377190808UL));
-			_ufle12jhs77_typeDragon = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5370164547221752111UL, 10716875351815048322UL));
-			_ufle12jhs77_typeDark = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5151899037259993337UL, 122929668456730277UL));
-			_ufle12jhs77_typeSteel = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4971369248438536954UL, 7940383754764567173UL));
-			_ufle12jhs77_typeFairy = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5079779118585905173UL, 7314807089545377433UL));
+			_ufle12jhs77_type_Normal = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5263641030187492072UL, 1557598411138583432UL));
+			_ufle12jhs77_type_Fire = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4626478563673274391UL, 17305593359083548058UL));
+			_ufle12jhs77_type_Water = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5422153042225921787UL, 1927153451905170338UL));
+			_ufle12jhs77_type_Electric = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4953182388322203509UL, 5779914060623339689UL));
+			_ufle12jhs77_type_Grass = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5306776043533224922UL, 5992270903673769394UL));
+			_ufle12jhs77_type_Ice = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5738472233180683205UL, 12230920567929529519UL));
+			_ufle12jhs77_type_Fighting = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4759298436964166315UL, 3818705429383687862UL));
+			_ufle12jhs77_type_Poison = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5545442699261356991UL, 6876891155226281366UL));
+			_ufle12jhs77_type_Ground = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5189787413586165869UL, 6846777815896518058UL));
+			_ufle12jhs77_type_Flying = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4949596983316111133UL, 16687354416484181647UL));
+			_ufle12jhs77_type_Psychic = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4746593253453674518UL, 18245615560319760047UL));
+			_ufle12jhs77_type_Bug = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5205382101776561411UL, 17982494269893299604UL));
+			_ufle12jhs77_type_Rock = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5217412554646600456UL, 8358844179238720649UL));
+			_ufle12jhs77_type_Ghost = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5214187285417918631UL, 9509363925377190808UL));
+			_ufle12jhs77_type_Dragon = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5370164547221752111UL, 10716875351815048322UL));
+			_ufle12jhs77_type_Dark = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5151899037259993337UL, 122929668456730277UL));
+			_ufle12jhs77_type_Steel = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4971369248438536954UL, 7940383754764567173UL));
+			_ufle12jhs77_type_Fairy = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5079779118585905173UL, 7314807089545377433UL));
 		}
 		public static void ReleaseCodeGenRuntime()
 		{
 			_metaDefault = null;
 			_ufle12jhs77_name = null;
 			_ufle12jhs77_typeId = null;
-			_ufle12jhs77_typeNormal = null;
-			_ufle12jhs77_typeFire = null;
-			_ufle12jhs77_typeWater = null;
-			_ufle12jhs77_typeElectric = null;
-			_ufle12jhs77_typeGrass = null;
-			_ufle12jhs77_typeIce = null;
-			_ufle12jhs77_typeFighting = null;
-			_ufle12jhs77_typePoison = null;
-			_ufle12jhs77_typeGround = null;
-			_ufle12jhs77_typeFlying = null;
-			_ufle12jhs77_typePsychic = null;
-			_ufle12jhs77_typeBug = null;
-			_ufle12jhs77_typeRock = null;
-			_ufle12jhs77_typeGhost = null;
-			_ufle12jhs77_typeDragon = null;
-			_ufle12jhs77_typeDark = null;
-			_ufle12jhs77_typeSteel = null;
-			_ufle12jhs77_typeFairy = null;
+			_ufle12jhs77_type_Normal = null;
+			_ufle12jhs77_type_Fire = null;
+			_ufle12jhs77_type_Water = null;
+			_ufle12jhs77_type_Electric = null;
+			_ufle12jhs77_type_Grass = null;
+			_ufle12jhs77_type_Ice = null;
+			_ufle12jhs77_type_Fighting = null;
+			_ufle12jhs77_type_Poison = null;
+			_ufle12jhs77_type_Ground = null;
+			_ufle12jhs77_type_Flying = null;
+			_ufle12jhs77_type_Psychic = null;
+			_ufle12jhs77_type_Bug = null;
+			_ufle12jhs77_type_Rock = null;
+			_ufle12jhs77_type_Ghost = null;
+			_ufle12jhs77_type_Dragon = null;
+			_ufle12jhs77_type_Dark = null;
+			_ufle12jhs77_type_Steel = null;
+			_ufle12jhs77_type_Fairy = null;
 		}
 
 		[Preserve]
@@ -232,24 +232,24 @@ namespace Iono.MasterData
 			public const string Meta = "typeCompatibility";
 			public const string name = "name";
 			public const string typeId = "typeId";
-			public const string typeNormal = "typeNormal";
-			public const string typeFire = "typeFire";
-			public const string typeWater = "typeWater";
-			public const string typeElectric = "typeElectric";
-			public const string typeGrass = "typeGrass";
-			public const string typeIce = "typeIce";
-			public const string typeFighting = "typeFighting";
-			public const string typePoison = "typePoison";
-			public const string typeGround = "typeGround";
-			public const string typeFlying = "typeFlying";
-			public const string typePsychic = "typePsychic";
-			public const string typeBug = "typeBug";
-			public const string typeRock = "typeRock";
-			public const string typeGhost = "typeGhost";
-			public const string typeDragon = "typeDragon";
-			public const string typeDark = "typeDark";
-			public const string typeSteel = "typeSteel";
-			public const string typeFairy = "typeFairy";
+			public const string type_Normal = "type_Normal";
+			public const string type_Fire = "type_Fire";
+			public const string type_Water = "type_Water";
+			public const string type_Electric = "type_Electric";
+			public const string type_Grass = "type_Grass";
+			public const string type_Ice = "type_Ice";
+			public const string type_Fighting = "type_Fighting";
+			public const string type_Poison = "type_Poison";
+			public const string type_Ground = "type_Ground";
+			public const string type_Flying = "type_Flying";
+			public const string type_Psychic = "type_Psychic";
+			public const string type_Bug = "type_Bug";
+			public const string type_Rock = "type_Rock";
+			public const string type_Ghost = "type_Ghost";
+			public const string type_Dragon = "type_Dragon";
+			public const string type_Dark = "type_Dark";
+			public const string type_Steel = "type_Steel";
+			public const string type_Fairy = "type_Fairy";
 		}
 	}
 }

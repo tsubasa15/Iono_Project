@@ -48,15 +48,15 @@ namespace Iono.MasterData
 			get => _rarity[Index];
 			set => _rarity[Index] = value;
 		}
-		public System.String skillId
-		{
-			get => _skillId[Index];
-			set => _skillId[Index] = value;
-		}
 		public System.String itemCategory
 		{
 			get => _itemCategory[Index];
 			set => _itemCategory[Index] = value;
+		}
+		public skill skillId
+		{
+			get => (skill) _skillId[Index];
+			set => _skillId[Index] = value;
 		}
 		private static BansheeGz.BGDatabase.BGFieldEntityName _ufle12jhs77_name;
 		public static BansheeGz.BGDatabase.BGFieldEntityName _name => _ufle12jhs77_name ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(MetaDefault, new BGId(5021313763942901040UL, 3028225332249866880UL), () => _ufle12jhs77_name = null);
@@ -70,10 +70,10 @@ namespace Iono.MasterData
 		public static BansheeGz.BGDatabase.BGFieldString _imageId => _ufle12jhs77_imageId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5200284452522658981UL, 456466506146157477UL), () => _ufle12jhs77_imageId = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_rarity;
 		public static BansheeGz.BGDatabase.BGFieldString _rarity => _ufle12jhs77_rarity ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5420841983267957128UL, 13673821402396557722UL), () => _ufle12jhs77_rarity = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_skillId;
-		public static BansheeGz.BGDatabase.BGFieldString _skillId => _ufle12jhs77_skillId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4723893209159479566UL, 14558590460380034194UL), () => _ufle12jhs77_skillId = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_itemCategory;
 		public static BansheeGz.BGDatabase.BGFieldString _itemCategory => _ufle12jhs77_itemCategory ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4685351210643547513UL, 13399976397344204697UL), () => _ufle12jhs77_itemCategory = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_skillId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _skillId => _ufle12jhs77_skillId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5122338813377059524UL, 3227744885004329131UL), () => _ufle12jhs77_skillId = null);
 		private static BansheeGz.BGDatabase.BGKey _edeht3sdad33_itemKey;
 		public static BansheeGz.BGDatabase.BGKey _itemKey => _edeht3sdad33_itemKey ??= BGCodeGenUtils.GetKey(MetaDefault, new BGId(5143607304848527015UL, 7365993704547434146UL), () => _edeht3sdad33_itemKey = null);
 		private item() : base(MetaDefault) {}
@@ -99,8 +99,8 @@ namespace Iono.MasterData
 			_ufle12jhs77_descTextId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5037343836618115989UL, 10984033664034706347UL));
 			_ufle12jhs77_imageId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5200284452522658981UL, 456466506146157477UL));
 			_ufle12jhs77_rarity = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5420841983267957128UL, 13673821402396557722UL));
-			_ufle12jhs77_skillId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4723893209159479566UL, 14558590460380034194UL));
 			_ufle12jhs77_itemCategory = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4685351210643547513UL, 13399976397344204697UL));
+			_ufle12jhs77_skillId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5122338813377059524UL, 3227744885004329131UL));
 			_edeht3sdad33_itemKey = BGCodeGenUtils.GetKey(_metaDefault, new BGId(5143607304848527015UL, 7365993704547434146UL));
 		}
 		public static void ReleaseCodeGenRuntime()
@@ -112,8 +112,8 @@ namespace Iono.MasterData
 			_ufle12jhs77_descTextId = null;
 			_ufle12jhs77_imageId = null;
 			_ufle12jhs77_rarity = null;
-			_ufle12jhs77_skillId = null;
 			_ufle12jhs77_itemCategory = null;
+			_ufle12jhs77_skillId = null;
 			_edeht3sdad33_itemKey = null;
 		}
 
@@ -133,8 +133,8 @@ namespace Iono.MasterData
 			public const string descTextId = "descTextId";
 			public const string imageId = "imageId";
 			public const string rarity = "rarity";
-			public const string skillId = "skillId";
 			public const string itemCategory = "itemCategory";
+			public const string skillId = "skillId";
 			public const string itemKey = "itemKey";
 		}
 	}

@@ -98,11 +98,6 @@ namespace Iono.MasterData
 			get => _accuracy[Index];
 			set => _accuracy.SetValue(this, value);
 		}
-		public System.String jankenId
-		{
-			get => _jankenId[Index];
-			set => _jankenId[Index] = value;
-		}
 		public System.Int32 hpDrainRate
 		{
 			get => _hpDrainRate[Index];
@@ -122,26 +117,6 @@ namespace Iono.MasterData
 		{
 			get => _applyBuffBeforeAttack[Index];
 			set => _applyBuffBeforeAttack[Index] = value;
-		}
-		public System.String targetBuffId
-		{
-			get => _targetBuffId[Index];
-			set => _targetBuffId[Index] = value;
-		}
-		public System.String targetConditionId
-		{
-			get => _targetConditionId[Index];
-			set => _targetConditionId[Index] = value;
-		}
-		public System.String userBuffId
-		{
-			get => _userBuffId[Index];
-			set => _userBuffId[Index] = value;
-		}
-		public System.String userConditionId
-		{
-			get => _userConditionId[Index];
-			set => _userConditionId[Index] = value;
 		}
 		public System.Int32 barrierCount
 		{
@@ -218,35 +193,15 @@ namespace Iono.MasterData
 			get => _criticalRank[Index];
 			set => _criticalRank.SetValue(this, value);
 		}
-		public System.String selfDestructFlag
-		{
-			get => _selfDestructFlag[Index];
-			set => _selfDestructFlag[Index] = value;
-		}
-		public System.String fixedDamageFlag
-		{
-			get => _fixedDamageFlag[Index];
-			set => _fixedDamageFlag[Index] = value;
-		}
 		public System.Int32 fixedDamageValue
 		{
 			get => _fixedDamageValue[Index];
 			set => _fixedDamageValue.SetValue(this, value);
 		}
-		public System.String changeWeatherFlag
-		{
-			get => _changeWeatherFlag[Index];
-			set => _changeWeatherFlag[Index] = value;
-		}
 		public System.String weatherId
 		{
 			get => _weatherId[Index];
 			set => _weatherId[Index] = value;
-		}
-		public System.String changeFieldFlag
-		{
-			get => _changeFieldFlag[Index];
-			set => _changeFieldFlag[Index] = value;
 		}
 		public System.String fieldId
 		{
@@ -263,20 +218,65 @@ namespace Iono.MasterData
 			get => _actionPriority[Index];
 			set => _actionPriority.SetValue(this, value);
 		}
-		public System.String guaranteedHitFlag
+		public janken jankenId
+		{
+			get => (janken) _jankenId[Index];
+			set => _jankenId[Index] = value;
+		}
+		public buffdebuff targetBuffId
+		{
+			get => (buffdebuff) _targetBuffId[Index];
+			set => _targetBuffId[Index] = value;
+		}
+		public buffdebuff userBuffId
+		{
+			get => (buffdebuff) _userBuffId[Index];
+			set => _userBuffId[Index] = value;
+		}
+		public abnormalcondition targetConditionId
+		{
+			get => (abnormalcondition) _targetConditionId[Index];
+			set => _targetConditionId[Index] = value;
+		}
+		public abnormalcondition userConditionId
+		{
+			get => (abnormalcondition) _userConditionId[Index];
+			set => _userConditionId[Index] = value;
+		}
+		public System.Boolean guaranteedHitFlag
 		{
 			get => _guaranteedHitFlag[Index];
-			set => _guaranteedHitFlag[Index] = value;
+			set => _guaranteedHitFlag.SetValue(this, value);
 		}
-		public System.String pierceBarrierFlag
+		public System.Boolean pierceBarrierFlag
 		{
 			get => _pierceBarrierFlag[Index];
-			set => _pierceBarrierFlag[Index] = value;
+			set => _pierceBarrierFlag.SetValue(this, value);
 		}
-		public System.String pierceShieldFlag
+		public System.Boolean pierceShieldFlag
 		{
 			get => _pierceShieldFlag[Index];
-			set => _pierceShieldFlag[Index] = value;
+			set => _pierceShieldFlag.SetValue(this, value);
+		}
+		public System.Boolean changeWeatherFlag
+		{
+			get => _changeWeatherFlag[Index];
+			set => _changeWeatherFlag.SetValue(this, value);
+		}
+		public System.Boolean changeFieldFlag
+		{
+			get => _changeFieldFlag[Index];
+			set => _changeFieldFlag.SetValue(this, value);
+		}
+		public System.Boolean fixedDamageFlag
+		{
+			get => _fixedDamageFlag[Index];
+			set => _fixedDamageFlag.SetValue(this, value);
+		}
+		public System.Boolean selfDestructFlag
+		{
+			get => _selfDestructFlag[Index];
+			set => _selfDestructFlag.SetValue(this, value);
 		}
 		private static BansheeGz.BGDatabase.BGFieldEntityName _ufle12jhs77_name;
 		public static BansheeGz.BGDatabase.BGFieldEntityName _name => _ufle12jhs77_name ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(MetaDefault, new BGId(5123197815993307180UL, 8952811171006590352UL), () => _ufle12jhs77_name = null);
@@ -310,8 +310,6 @@ namespace Iono.MasterData
 		public static BansheeGz.BGDatabase.BGFieldInt _power => _ufle12jhs77_power ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4637042118216186344UL, 12574305154716340107UL), () => _ufle12jhs77_power = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_accuracy;
 		public static BansheeGz.BGDatabase.BGFieldInt _accuracy => _ufle12jhs77_accuracy ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5737700373714774179UL, 8776513802547622806UL), () => _ufle12jhs77_accuracy = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_jankenId;
-		public static BansheeGz.BGDatabase.BGFieldString _jankenId => _ufle12jhs77_jankenId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4922932588252653205UL, 10117531602736339847UL), () => _ufle12jhs77_jankenId = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_hpDrainRate;
 		public static BansheeGz.BGDatabase.BGFieldInt _hpDrainRate => _ufle12jhs77_hpDrainRate ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5110078382729692860UL, 6264513899783822256UL), () => _ufle12jhs77_hpDrainRate = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_powerAtMaxHp;
@@ -320,14 +318,6 @@ namespace Iono.MasterData
 		public static BansheeGz.BGDatabase.BGFieldInt _powerAtMinHp => _ufle12jhs77_powerAtMinHp ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5267833106342808989UL, 9330195630183223478UL), () => _ufle12jhs77_powerAtMinHp = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_applyBuffBeforeAttack;
 		public static BansheeGz.BGDatabase.BGFieldString _applyBuffBeforeAttack => _ufle12jhs77_applyBuffBeforeAttack ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5592700155671556089UL, 14562699680275663761UL), () => _ufle12jhs77_applyBuffBeforeAttack = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_targetBuffId;
-		public static BansheeGz.BGDatabase.BGFieldString _targetBuffId => _ufle12jhs77_targetBuffId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4681122900122396064UL, 14165543729986046638UL), () => _ufle12jhs77_targetBuffId = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_targetConditionId;
-		public static BansheeGz.BGDatabase.BGFieldString _targetConditionId => _ufle12jhs77_targetConditionId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5014678140385634431UL, 15290948878835348877UL), () => _ufle12jhs77_targetConditionId = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_userBuffId;
-		public static BansheeGz.BGDatabase.BGFieldString _userBuffId => _ufle12jhs77_userBuffId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5743986089629009713UL, 14677397326730790795UL), () => _ufle12jhs77_userBuffId = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_userConditionId;
-		public static BansheeGz.BGDatabase.BGFieldString _userConditionId => _ufle12jhs77_userConditionId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4951043386417120845UL, 5549638881441832334UL), () => _ufle12jhs77_userConditionId = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_barrierCount;
 		public static BansheeGz.BGDatabase.BGFieldInt _barrierCount => _ufle12jhs77_barrierCount ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4905594079219648901UL, 4782333500667968169UL), () => _ufle12jhs77_barrierCount = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_barrierType;
@@ -358,30 +348,49 @@ namespace Iono.MasterData
 		public static BansheeGz.BGDatabase.BGFieldInt _multiHitProbability => _ufle12jhs77_multiHitProbability ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4805475120714811248UL, 15581915683448628159UL), () => _ufle12jhs77_multiHitProbability = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_criticalRank;
 		public static BansheeGz.BGDatabase.BGFieldInt _criticalRank => _ufle12jhs77_criticalRank ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4723589441987687754UL, 14396295602532719493UL), () => _ufle12jhs77_criticalRank = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_selfDestructFlag;
-		public static BansheeGz.BGDatabase.BGFieldString _selfDestructFlag => _ufle12jhs77_selfDestructFlag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5758969402364129570UL, 2440869574569187713UL), () => _ufle12jhs77_selfDestructFlag = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_fixedDamageFlag;
-		public static BansheeGz.BGDatabase.BGFieldString _fixedDamageFlag => _ufle12jhs77_fixedDamageFlag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4627206958046372043UL, 740323234585429158UL), () => _ufle12jhs77_fixedDamageFlag = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_fixedDamageValue;
 		public static BansheeGz.BGDatabase.BGFieldInt _fixedDamageValue => _ufle12jhs77_fixedDamageValue ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5648380328627578546UL, 13521494063829986460UL), () => _ufle12jhs77_fixedDamageValue = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_changeWeatherFlag;
-		public static BansheeGz.BGDatabase.BGFieldString _changeWeatherFlag => _ufle12jhs77_changeWeatherFlag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5285086922188306936UL, 14519477230245158298UL), () => _ufle12jhs77_changeWeatherFlag = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_weatherId;
 		public static BansheeGz.BGDatabase.BGFieldString _weatherId => _ufle12jhs77_weatherId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5662601799301234738UL, 11264563223222987924UL), () => _ufle12jhs77_weatherId = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_changeFieldFlag;
-		public static BansheeGz.BGDatabase.BGFieldString _changeFieldFlag => _ufle12jhs77_changeFieldFlag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4894037332464117262UL, 8507976759271934848UL), () => _ufle12jhs77_changeFieldFlag = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_fieldId;
 		public static BansheeGz.BGDatabase.BGFieldString _fieldId => _ufle12jhs77_fieldId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5612673836658491151UL, 1641981486371500708UL), () => _ufle12jhs77_fieldId = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_specialEffectConditionId;
 		public static BansheeGz.BGDatabase.BGFieldString _specialEffectConditionId => _ufle12jhs77_specialEffectConditionId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5520366845888038246UL, 479922739760700577UL), () => _ufle12jhs77_specialEffectConditionId = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_actionPriority;
 		public static BansheeGz.BGDatabase.BGFieldInt _actionPriority => _ufle12jhs77_actionPriority ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5585228350396183635UL, 1755979379901214120UL), () => _ufle12jhs77_actionPriority = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_guaranteedHitFlag;
-		public static BansheeGz.BGDatabase.BGFieldString _guaranteedHitFlag => _ufle12jhs77_guaranteedHitFlag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4744060180511079813UL, 3628685751201475980UL), () => _ufle12jhs77_guaranteedHitFlag = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_pierceBarrierFlag;
-		public static BansheeGz.BGDatabase.BGFieldString _pierceBarrierFlag => _ufle12jhs77_pierceBarrierFlag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5172370991283310489UL, 16684928978788782221UL), () => _ufle12jhs77_pierceBarrierFlag = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_pierceShieldFlag;
-		public static BansheeGz.BGDatabase.BGFieldString _pierceShieldFlag => _ufle12jhs77_pierceShieldFlag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4686127471334484430UL, 7881161634497401755UL), () => _ufle12jhs77_pierceShieldFlag = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_jankenId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _jankenId => _ufle12jhs77_jankenId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5296176783062435024UL, 17158704863935787938UL), () => _ufle12jhs77_jankenId = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_targetBuffId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _targetBuffId => _ufle12jhs77_targetBuffId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5621538147706099530UL, 15640345406603901104UL), () => _ufle12jhs77_targetBuffId = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_userBuffId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _userBuffId => _ufle12jhs77_userBuffId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(4902629646387887520UL, 10390537468717415060UL), () => _ufle12jhs77_userBuffId = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_targetConditionId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _targetConditionId => _ufle12jhs77_targetConditionId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5560822096214341257UL, 13891741393878146481UL), () => _ufle12jhs77_targetConditionId = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_userConditionId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _userConditionId => _ufle12jhs77_userConditionId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(4635459305867907458UL, 4959464754983229357UL), () => _ufle12jhs77_userConditionId = null);
+		private static BansheeGz.BGDatabase.BGFieldBool _ufle12jhs77_guaranteedHitFlag;
+		public static BansheeGz.BGDatabase.BGFieldBool _guaranteedHitFlag => _ufle12jhs77_guaranteedHitFlag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldBool>(MetaDefault, new BGId(5086269220495800226UL, 6394174357496699269UL), () => _ufle12jhs77_guaranteedHitFlag = null);
+		private static BansheeGz.BGDatabase.BGFieldBool _ufle12jhs77_pierceBarrierFlag;
+		public static BansheeGz.BGDatabase.BGFieldBool _pierceBarrierFlag => _ufle12jhs77_pierceBarrierFlag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldBool>(MetaDefault, new BGId(4616835570647001322UL, 3697461208925056143UL), () => _ufle12jhs77_pierceBarrierFlag = null);
+		private static BansheeGz.BGDatabase.BGFieldBool _ufle12jhs77_pierceShieldFlag;
+		public static BansheeGz.BGDatabase.BGFieldBool _pierceShieldFlag => _ufle12jhs77_pierceShieldFlag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldBool>(MetaDefault, new BGId(5564772478280759691UL, 16934115719918024364UL), () => _ufle12jhs77_pierceShieldFlag = null);
+		private static BansheeGz.BGDatabase.BGFieldBool _ufle12jhs77_changeWeatherFlag;
+		public static BansheeGz.BGDatabase.BGFieldBool _changeWeatherFlag => _ufle12jhs77_changeWeatherFlag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldBool>(MetaDefault, new BGId(5614678605245773606UL, 17296149091790613183UL), () => _ufle12jhs77_changeWeatherFlag = null);
+		private static BansheeGz.BGDatabase.BGFieldBool _ufle12jhs77_changeFieldFlag;
+		public static BansheeGz.BGDatabase.BGFieldBool _changeFieldFlag => _ufle12jhs77_changeFieldFlag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldBool>(MetaDefault, new BGId(5525816365690520623UL, 8949687732978284214UL), () => _ufle12jhs77_changeFieldFlag = null);
+		private static BansheeGz.BGDatabase.BGFieldBool _ufle12jhs77_fixedDamageFlag;
+		public static BansheeGz.BGDatabase.BGFieldBool _fixedDamageFlag => _ufle12jhs77_fixedDamageFlag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldBool>(MetaDefault, new BGId(5307445969301647497UL, 14746900741543460512UL), () => _ufle12jhs77_fixedDamageFlag = null);
+		private static BansheeGz.BGDatabase.BGFieldBool _ufle12jhs77_selfDestructFlag;
+		public static BansheeGz.BGDatabase.BGFieldBool _selfDestructFlag => _ufle12jhs77_selfDestructFlag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldBool>(MetaDefault, new BGId(4625049298063639268UL, 4654949951376471970UL), () => _ufle12jhs77_selfDestructFlag = null);
+		public List<Iono.MasterData.playerunit> RelatedplayerunitListUsingpassiveSkillIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.playerunit>(Iono.MasterData.playerunit._passiveSkillId, Id);
+		public List<Iono.MasterData.playerunit> RelatedplayerunitListUsingskillId1Relation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.playerunit>(Iono.MasterData.playerunit._skillId1, Id);
+		public List<Iono.MasterData.playerunit> RelatedplayerunitListUsingskillId2Relation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.playerunit>(Iono.MasterData.playerunit._skillId2, Id);
+		public List<Iono.MasterData.playerunit> RelatedplayerunitListUsingskillId3Relation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.playerunit>(Iono.MasterData.playerunit._skillId3, Id);
+		public List<Iono.MasterData.playerunit> RelatedplayerunitListUsingskillId4Relation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.playerunit>(Iono.MasterData.playerunit._skillId4, Id);
+		public List<Iono.MasterData.enemyunit> RelatedenemyunitListUsingpassiveSkillIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemyunit>(Iono.MasterData.enemyunit._passiveSkillId, Id);
+		public List<Iono.MasterData.enemyslotdetail> RelatedenemyslotdetailListUsingskillIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemyslotdetail>(Iono.MasterData.enemyslotdetail._skillId, Id);
+		public List<Iono.MasterData.item> RelateditemListUsingskillIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.item>(Iono.MasterData.item._skillId, Id);
+		public List<Iono.MasterData.field> RelatedfieldListUsingnegatedSkillIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.field>(Iono.MasterData.field._negatedSkillId, Id);
 		private static BansheeGz.BGDatabase.BGKey _edeht3sdad33_skillKey;
 		public static BansheeGz.BGDatabase.BGKey _skillKey => _edeht3sdad33_skillKey ??= BGCodeGenUtils.GetKey(MetaDefault, new BGId(5565842710707110596UL, 11905549077091789974UL), () => _edeht3sdad33_skillKey = null);
 		private skill() : base(MetaDefault) {}
@@ -397,6 +406,15 @@ namespace Iono.MasterData
 		public static skill NewEntity() => (skill) MetaDefault.NewEntity();
 		public static skill NewEntity(BGId entityId) => (skill) MetaDefault.NewEntity(entityId);
 		public static skill NewEntity(Action<skill> callback) => (skill) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((skill)entity)));
+		public List<Iono.MasterData.playerunit> FillRelatedplayerunitListUsingpassiveSkillIdRelation(List<Iono.MasterData.playerunit> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.playerunit>(Iono.MasterData.playerunit._passiveSkillId, Id, result);
+		public List<Iono.MasterData.playerunit> FillRelatedplayerunitListUsingskillId1Relation(List<Iono.MasterData.playerunit> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.playerunit>(Iono.MasterData.playerunit._skillId1, Id, result);
+		public List<Iono.MasterData.playerunit> FillRelatedplayerunitListUsingskillId2Relation(List<Iono.MasterData.playerunit> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.playerunit>(Iono.MasterData.playerunit._skillId2, Id, result);
+		public List<Iono.MasterData.playerunit> FillRelatedplayerunitListUsingskillId3Relation(List<Iono.MasterData.playerunit> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.playerunit>(Iono.MasterData.playerunit._skillId3, Id, result);
+		public List<Iono.MasterData.playerunit> FillRelatedplayerunitListUsingskillId4Relation(List<Iono.MasterData.playerunit> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.playerunit>(Iono.MasterData.playerunit._skillId4, Id, result);
+		public List<Iono.MasterData.enemyunit> FillRelatedenemyunitListUsingpassiveSkillIdRelation(List<Iono.MasterData.enemyunit> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemyunit>(Iono.MasterData.enemyunit._passiveSkillId, Id, result);
+		public List<Iono.MasterData.enemyslotdetail> FillRelatedenemyslotdetailListUsingskillIdRelation(List<Iono.MasterData.enemyslotdetail> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemyslotdetail>(Iono.MasterData.enemyslotdetail._skillId, Id, result);
+		public List<Iono.MasterData.item> FillRelateditemListUsingskillIdRelation(List<Iono.MasterData.item> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.item>(Iono.MasterData.item._skillId, Id, result);
+		public List<Iono.MasterData.field> FillRelatedfieldListUsingnegatedSkillIdRelation(List<Iono.MasterData.field> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.field>(Iono.MasterData.field._negatedSkillId, Id, result);
 		public static skill GetEntityByKeyskillKey(System.String skillId) => (skill) _skillKey.GetEntityByKey<System.String>(skillId);
 		public static void InitializeCodeGenRuntime()
 		{
@@ -417,15 +435,10 @@ namespace Iono.MasterData
 			_ufle12jhs77_physicMagicType = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4641536565812489476UL, 5376925982990865562UL));
 			_ufle12jhs77_power = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4637042118216186344UL, 12574305154716340107UL));
 			_ufle12jhs77_accuracy = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5737700373714774179UL, 8776513802547622806UL));
-			_ufle12jhs77_jankenId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4922932588252653205UL, 10117531602736339847UL));
 			_ufle12jhs77_hpDrainRate = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5110078382729692860UL, 6264513899783822256UL));
 			_ufle12jhs77_powerAtMaxHp = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4613477944408570408UL, 4354403803415210383UL));
 			_ufle12jhs77_powerAtMinHp = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5267833106342808989UL, 9330195630183223478UL));
 			_ufle12jhs77_applyBuffBeforeAttack = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5592700155671556089UL, 14562699680275663761UL));
-			_ufle12jhs77_targetBuffId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4681122900122396064UL, 14165543729986046638UL));
-			_ufle12jhs77_targetConditionId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5014678140385634431UL, 15290948878835348877UL));
-			_ufle12jhs77_userBuffId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5743986089629009713UL, 14677397326730790795UL));
-			_ufle12jhs77_userConditionId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4951043386417120845UL, 5549638881441832334UL));
 			_ufle12jhs77_barrierCount = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4905594079219648901UL, 4782333500667968169UL));
 			_ufle12jhs77_barrierType = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4740267406708086830UL, 4860818211560625840UL));
 			_ufle12jhs77_barrierMaxStacks = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5250558137787005958UL, 9748678008777579950UL));
@@ -441,18 +454,23 @@ namespace Iono.MasterData
 			_ufle12jhs77_maxHitCount = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5030497505215193602UL, 13664124320077053591UL));
 			_ufle12jhs77_multiHitProbability = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4805475120714811248UL, 15581915683448628159UL));
 			_ufle12jhs77_criticalRank = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4723589441987687754UL, 14396295602532719493UL));
-			_ufle12jhs77_selfDestructFlag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5758969402364129570UL, 2440869574569187713UL));
-			_ufle12jhs77_fixedDamageFlag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4627206958046372043UL, 740323234585429158UL));
 			_ufle12jhs77_fixedDamageValue = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5648380328627578546UL, 13521494063829986460UL));
-			_ufle12jhs77_changeWeatherFlag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5285086922188306936UL, 14519477230245158298UL));
 			_ufle12jhs77_weatherId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5662601799301234738UL, 11264563223222987924UL));
-			_ufle12jhs77_changeFieldFlag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4894037332464117262UL, 8507976759271934848UL));
 			_ufle12jhs77_fieldId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5612673836658491151UL, 1641981486371500708UL));
 			_ufle12jhs77_specialEffectConditionId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5520366845888038246UL, 479922739760700577UL));
 			_ufle12jhs77_actionPriority = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5585228350396183635UL, 1755979379901214120UL));
-			_ufle12jhs77_guaranteedHitFlag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4744060180511079813UL, 3628685751201475980UL));
-			_ufle12jhs77_pierceBarrierFlag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5172370991283310489UL, 16684928978788782221UL));
-			_ufle12jhs77_pierceShieldFlag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4686127471334484430UL, 7881161634497401755UL));
+			_ufle12jhs77_jankenId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5296176783062435024UL, 17158704863935787938UL));
+			_ufle12jhs77_targetBuffId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5621538147706099530UL, 15640345406603901104UL));
+			_ufle12jhs77_userBuffId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(4902629646387887520UL, 10390537468717415060UL));
+			_ufle12jhs77_targetConditionId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5560822096214341257UL, 13891741393878146481UL));
+			_ufle12jhs77_userConditionId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(4635459305867907458UL, 4959464754983229357UL));
+			_ufle12jhs77_guaranteedHitFlag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldBool>(_metaDefault, new BGId(5086269220495800226UL, 6394174357496699269UL));
+			_ufle12jhs77_pierceBarrierFlag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldBool>(_metaDefault, new BGId(4616835570647001322UL, 3697461208925056143UL));
+			_ufle12jhs77_pierceShieldFlag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldBool>(_metaDefault, new BGId(5564772478280759691UL, 16934115719918024364UL));
+			_ufle12jhs77_changeWeatherFlag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldBool>(_metaDefault, new BGId(5614678605245773606UL, 17296149091790613183UL));
+			_ufle12jhs77_changeFieldFlag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldBool>(_metaDefault, new BGId(5525816365690520623UL, 8949687732978284214UL));
+			_ufle12jhs77_fixedDamageFlag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldBool>(_metaDefault, new BGId(5307445969301647497UL, 14746900741543460512UL));
+			_ufle12jhs77_selfDestructFlag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldBool>(_metaDefault, new BGId(4625049298063639268UL, 4654949951376471970UL));
 			_edeht3sdad33_skillKey = BGCodeGenUtils.GetKey(_metaDefault, new BGId(5565842710707110596UL, 11905549077091789974UL));
 		}
 		public static void ReleaseCodeGenRuntime()
@@ -474,15 +492,10 @@ namespace Iono.MasterData
 			_ufle12jhs77_physicMagicType = null;
 			_ufle12jhs77_power = null;
 			_ufle12jhs77_accuracy = null;
-			_ufle12jhs77_jankenId = null;
 			_ufle12jhs77_hpDrainRate = null;
 			_ufle12jhs77_powerAtMaxHp = null;
 			_ufle12jhs77_powerAtMinHp = null;
 			_ufle12jhs77_applyBuffBeforeAttack = null;
-			_ufle12jhs77_targetBuffId = null;
-			_ufle12jhs77_targetConditionId = null;
-			_ufle12jhs77_userBuffId = null;
-			_ufle12jhs77_userConditionId = null;
 			_ufle12jhs77_barrierCount = null;
 			_ufle12jhs77_barrierType = null;
 			_ufle12jhs77_barrierMaxStacks = null;
@@ -498,18 +511,23 @@ namespace Iono.MasterData
 			_ufle12jhs77_maxHitCount = null;
 			_ufle12jhs77_multiHitProbability = null;
 			_ufle12jhs77_criticalRank = null;
-			_ufle12jhs77_selfDestructFlag = null;
-			_ufle12jhs77_fixedDamageFlag = null;
 			_ufle12jhs77_fixedDamageValue = null;
-			_ufle12jhs77_changeWeatherFlag = null;
 			_ufle12jhs77_weatherId = null;
-			_ufle12jhs77_changeFieldFlag = null;
 			_ufle12jhs77_fieldId = null;
 			_ufle12jhs77_specialEffectConditionId = null;
 			_ufle12jhs77_actionPriority = null;
+			_ufle12jhs77_jankenId = null;
+			_ufle12jhs77_targetBuffId = null;
+			_ufle12jhs77_userBuffId = null;
+			_ufle12jhs77_targetConditionId = null;
+			_ufle12jhs77_userConditionId = null;
 			_ufle12jhs77_guaranteedHitFlag = null;
 			_ufle12jhs77_pierceBarrierFlag = null;
 			_ufle12jhs77_pierceShieldFlag = null;
+			_ufle12jhs77_changeWeatherFlag = null;
+			_ufle12jhs77_changeFieldFlag = null;
+			_ufle12jhs77_fixedDamageFlag = null;
+			_ufle12jhs77_selfDestructFlag = null;
 			_edeht3sdad33_skillKey = null;
 		}
 
@@ -539,15 +557,10 @@ namespace Iono.MasterData
 			public const string physicMagicType = "physicMagicType";
 			public const string power = "power";
 			public const string accuracy = "accuracy";
-			public const string jankenId = "jankenId";
 			public const string hpDrainRate = "hpDrainRate";
 			public const string powerAtMaxHp = "powerAtMaxHp";
 			public const string powerAtMinHp = "powerAtMinHp";
 			public const string applyBuffBeforeAttack = "applyBuffBeforeAttack";
-			public const string targetBuffId = "targetBuffId";
-			public const string targetConditionId = "targetConditionId";
-			public const string userBuffId = "userBuffId";
-			public const string userConditionId = "userConditionId";
 			public const string barrierCount = "barrierCount";
 			public const string barrierType = "barrierType";
 			public const string barrierMaxStacks = "barrierMaxStacks";
@@ -563,18 +576,23 @@ namespace Iono.MasterData
 			public const string maxHitCount = "maxHitCount";
 			public const string multiHitProbability = "multiHitProbability";
 			public const string criticalRank = "criticalRank";
-			public const string selfDestructFlag = "selfDestructFlag";
-			public const string fixedDamageFlag = "fixedDamageFlag";
 			public const string fixedDamageValue = "fixedDamageValue";
-			public const string changeWeatherFlag = "changeWeatherFlag";
 			public const string weatherId = "weatherId";
-			public const string changeFieldFlag = "changeFieldFlag";
 			public const string fieldId = "fieldId";
 			public const string specialEffectConditionId = "specialEffectConditionId";
 			public const string actionPriority = "actionPriority";
+			public const string jankenId = "jankenId";
+			public const string targetBuffId = "targetBuffId";
+			public const string userBuffId = "userBuffId";
+			public const string targetConditionId = "targetConditionId";
+			public const string userConditionId = "userConditionId";
 			public const string guaranteedHitFlag = "guaranteedHitFlag";
 			public const string pierceBarrierFlag = "pierceBarrierFlag";
 			public const string pierceShieldFlag = "pierceShieldFlag";
+			public const string changeWeatherFlag = "changeWeatherFlag";
+			public const string changeFieldFlag = "changeFieldFlag";
+			public const string fixedDamageFlag = "fixedDamageFlag";
+			public const string selfDestructFlag = "selfDestructFlag";
 			public const string skillKey = "skillKey";
 		}
 	}

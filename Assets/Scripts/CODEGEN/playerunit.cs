@@ -58,40 +58,10 @@ namespace Iono.MasterData
 			get => _gender[Index];
 			set => _gender[Index] = value;
 		}
-		public System.String typeId
-		{
-			get => _typeId[Index];
-			set => _typeId[Index] = value;
-		}
-		public System.String passiveSkillId
-		{
-			get => _passiveSkillId[Index];
-			set => _passiveSkillId[Index] = value;
-		}
 		public System.Int32 skillCount
 		{
 			get => _skillCount[Index];
 			set => _skillCount.SetValue(this, value);
-		}
-		public System.String skillId1
-		{
-			get => _skillId1[Index];
-			set => _skillId1[Index] = value;
-		}
-		public System.String skillId2
-		{
-			get => _skillId2[Index];
-			set => _skillId2[Index] = value;
-		}
-		public System.String skillId3
-		{
-			get => _skillId3[Index];
-			set => _skillId3[Index] = value;
-		}
-		public System.String skillId4
-		{
-			get => _skillId4[Index];
-			set => _skillId4[Index] = value;
 		}
 		public System.Int32 maxLevel
 		{
@@ -158,6 +128,36 @@ namespace Iono.MasterData
 			get => _tag2[Index];
 			set => _tag2[Index] = value;
 		}
+		public type typeId
+		{
+			get => (type) _typeId[Index];
+			set => _typeId[Index] = value;
+		}
+		public skill passiveSkillId
+		{
+			get => (skill) _passiveSkillId[Index];
+			set => _passiveSkillId[Index] = value;
+		}
+		public skill skillId1
+		{
+			get => (skill) _skillId1[Index];
+			set => _skillId1[Index] = value;
+		}
+		public skill skillId2
+		{
+			get => (skill) _skillId2[Index];
+			set => _skillId2[Index] = value;
+		}
+		public skill skillId3
+		{
+			get => (skill) _skillId3[Index];
+			set => _skillId3[Index] = value;
+		}
+		public skill skillId4
+		{
+			get => (skill) _skillId4[Index];
+			set => _skillId4[Index] = value;
+		}
 		private static BansheeGz.BGDatabase.BGFieldEntityName _ufle12jhs77_name;
 		public static BansheeGz.BGDatabase.BGFieldEntityName _name => _ufle12jhs77_name ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(MetaDefault, new BGId(5711987792189006244UL, 8979065725656031661UL), () => _ufle12jhs77_name = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_unitId;
@@ -174,20 +174,8 @@ namespace Iono.MasterData
 		public static BansheeGz.BGDatabase.BGFieldString _rarity => _ufle12jhs77_rarity ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5063780358305105810UL, 13563371573703432618UL), () => _ufle12jhs77_rarity = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_gender;
 		public static BansheeGz.BGDatabase.BGFieldString _gender => _ufle12jhs77_gender ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4953366469830383534UL, 8869264681256678799UL), () => _ufle12jhs77_gender = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_typeId;
-		public static BansheeGz.BGDatabase.BGFieldString _typeId => _ufle12jhs77_typeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4958757871638621081UL, 7822014447973157545UL), () => _ufle12jhs77_typeId = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_passiveSkillId;
-		public static BansheeGz.BGDatabase.BGFieldString _passiveSkillId => _ufle12jhs77_passiveSkillId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5674172385894031089UL, 17210455504254333344UL), () => _ufle12jhs77_passiveSkillId = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_skillCount;
 		public static BansheeGz.BGDatabase.BGFieldInt _skillCount => _ufle12jhs77_skillCount ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4956197478987634439UL, 6293111570342763707UL), () => _ufle12jhs77_skillCount = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_skillId1;
-		public static BansheeGz.BGDatabase.BGFieldString _skillId1 => _ufle12jhs77_skillId1 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5151783471494834059UL, 13229011735577667722UL), () => _ufle12jhs77_skillId1 = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_skillId2;
-		public static BansheeGz.BGDatabase.BGFieldString _skillId2 => _ufle12jhs77_skillId2 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4820408754579056206UL, 17348314408453488282UL), () => _ufle12jhs77_skillId2 = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_skillId3;
-		public static BansheeGz.BGDatabase.BGFieldString _skillId3 => _ufle12jhs77_skillId3 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5083476209228876530UL, 9352040297101553554UL), () => _ufle12jhs77_skillId3 = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_skillId4;
-		public static BansheeGz.BGDatabase.BGFieldString _skillId4 => _ufle12jhs77_skillId4 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5137656607502900590UL, 15021988243343751066UL), () => _ufle12jhs77_skillId4 = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_maxLevel;
 		public static BansheeGz.BGDatabase.BGFieldInt _maxLevel => _ufle12jhs77_maxLevel ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5500941242680240606UL, 1420901780259743376UL), () => _ufle12jhs77_maxLevel = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_hp;
@@ -214,6 +202,18 @@ namespace Iono.MasterData
 		public static BansheeGz.BGDatabase.BGFieldString _tag1 => _ufle12jhs77_tag1 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5747392093184680619UL, 11461701534163657639UL), () => _ufle12jhs77_tag1 = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_tag2;
 		public static BansheeGz.BGDatabase.BGFieldString _tag2 => _ufle12jhs77_tag2 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4990019138333856925UL, 2736679447966676656UL), () => _ufle12jhs77_tag2 = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_typeId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _typeId => _ufle12jhs77_typeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(4963627942695374743UL, 12738715794954114488UL), () => _ufle12jhs77_typeId = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_passiveSkillId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _passiveSkillId => _ufle12jhs77_passiveSkillId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(4806765857270863595UL, 13206008134614523798UL), () => _ufle12jhs77_passiveSkillId = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_skillId1;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _skillId1 => _ufle12jhs77_skillId1 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5548043486257905475UL, 4037961129963009678UL), () => _ufle12jhs77_skillId1 = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_skillId2;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _skillId2 => _ufle12jhs77_skillId2 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(4996592635650074090UL, 13245665014245800090UL), () => _ufle12jhs77_skillId2 = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_skillId3;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _skillId3 => _ufle12jhs77_skillId3 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(4949759711241731939UL, 14486893760808706982UL), () => _ufle12jhs77_skillId3 = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_skillId4;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _skillId4 => _ufle12jhs77_skillId4 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5024013118483237566UL, 5797983135087938214UL), () => _ufle12jhs77_skillId4 = null);
 		private static BansheeGz.BGDatabase.BGKey _edeht3sdad33_unitKey;
 		public static BansheeGz.BGDatabase.BGKey _unitKey => _edeht3sdad33_unitKey ??= BGCodeGenUtils.GetKey(MetaDefault, new BGId(4917211555327134970UL, 1585179892647103120UL), () => _edeht3sdad33_unitKey = null);
 		private playerunit() : base(MetaDefault) {}
@@ -241,13 +241,7 @@ namespace Iono.MasterData
 			_ufle12jhs77_imageId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5554612168297024313UL, 354845531268512702UL));
 			_ufle12jhs77_rarity = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5063780358305105810UL, 13563371573703432618UL));
 			_ufle12jhs77_gender = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4953366469830383534UL, 8869264681256678799UL));
-			_ufle12jhs77_typeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4958757871638621081UL, 7822014447973157545UL));
-			_ufle12jhs77_passiveSkillId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5674172385894031089UL, 17210455504254333344UL));
 			_ufle12jhs77_skillCount = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4956197478987634439UL, 6293111570342763707UL));
-			_ufle12jhs77_skillId1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5151783471494834059UL, 13229011735577667722UL));
-			_ufle12jhs77_skillId2 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4820408754579056206UL, 17348314408453488282UL));
-			_ufle12jhs77_skillId3 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5083476209228876530UL, 9352040297101553554UL));
-			_ufle12jhs77_skillId4 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5137656607502900590UL, 15021988243343751066UL));
 			_ufle12jhs77_maxLevel = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5500941242680240606UL, 1420901780259743376UL));
 			_ufle12jhs77_hp = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4965034248987378402UL, 14182597692713470135UL));
 			_ufle12jhs77_atk = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4652554406397077276UL, 8758061061542804411UL));
@@ -261,6 +255,12 @@ namespace Iono.MasterData
 			_ufle12jhs77_resConfusion = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4808274001478605073UL, 7873230605581973130UL));
 			_ufle12jhs77_tag1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5747392093184680619UL, 11461701534163657639UL));
 			_ufle12jhs77_tag2 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4990019138333856925UL, 2736679447966676656UL));
+			_ufle12jhs77_typeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(4963627942695374743UL, 12738715794954114488UL));
+			_ufle12jhs77_passiveSkillId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(4806765857270863595UL, 13206008134614523798UL));
+			_ufle12jhs77_skillId1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5548043486257905475UL, 4037961129963009678UL));
+			_ufle12jhs77_skillId2 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(4996592635650074090UL, 13245665014245800090UL));
+			_ufle12jhs77_skillId3 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(4949759711241731939UL, 14486893760808706982UL));
+			_ufle12jhs77_skillId4 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5024013118483237566UL, 5797983135087938214UL));
 			_edeht3sdad33_unitKey = BGCodeGenUtils.GetKey(_metaDefault, new BGId(4917211555327134970UL, 1585179892647103120UL));
 		}
 		public static void ReleaseCodeGenRuntime()
@@ -274,13 +274,7 @@ namespace Iono.MasterData
 			_ufle12jhs77_imageId = null;
 			_ufle12jhs77_rarity = null;
 			_ufle12jhs77_gender = null;
-			_ufle12jhs77_typeId = null;
-			_ufle12jhs77_passiveSkillId = null;
 			_ufle12jhs77_skillCount = null;
-			_ufle12jhs77_skillId1 = null;
-			_ufle12jhs77_skillId2 = null;
-			_ufle12jhs77_skillId3 = null;
-			_ufle12jhs77_skillId4 = null;
 			_ufle12jhs77_maxLevel = null;
 			_ufle12jhs77_hp = null;
 			_ufle12jhs77_atk = null;
@@ -294,6 +288,12 @@ namespace Iono.MasterData
 			_ufle12jhs77_resConfusion = null;
 			_ufle12jhs77_tag1 = null;
 			_ufle12jhs77_tag2 = null;
+			_ufle12jhs77_typeId = null;
+			_ufle12jhs77_passiveSkillId = null;
+			_ufle12jhs77_skillId1 = null;
+			_ufle12jhs77_skillId2 = null;
+			_ufle12jhs77_skillId3 = null;
+			_ufle12jhs77_skillId4 = null;
 			_edeht3sdad33_unitKey = null;
 		}
 
@@ -315,13 +315,7 @@ namespace Iono.MasterData
 			public const string imageId = "imageId";
 			public const string rarity = "rarity";
 			public const string gender = "gender";
-			public const string typeId = "typeId";
-			public const string passiveSkillId = "passiveSkillId";
 			public const string skillCount = "skillCount";
-			public const string skillId1 = "skillId1";
-			public const string skillId2 = "skillId2";
-			public const string skillId3 = "skillId3";
-			public const string skillId4 = "skillId4";
 			public const string maxLevel = "maxLevel";
 			public const string hp = "hp";
 			public const string atk = "atk";
@@ -335,6 +329,12 @@ namespace Iono.MasterData
 			public const string resConfusion = "resConfusion";
 			public const string tag1 = "tag1";
 			public const string tag2 = "tag2";
+			public const string typeId = "typeId";
+			public const string passiveSkillId = "passiveSkillId";
+			public const string skillId1 = "skillId1";
+			public const string skillId2 = "skillId2";
+			public const string skillId3 = "skillId3";
+			public const string skillId4 = "skillId4";
 			public const string unitKey = "unitKey";
 		}
 	}

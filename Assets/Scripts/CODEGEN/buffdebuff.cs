@@ -73,20 +73,15 @@ namespace Iono.MasterData
 			get => _consumeTiming[Index];
 			set => _consumeTiming[Index] = value;
 		}
-		public System.String consumeTimingpowerUpTiming
+		public System.String powerUpTiming
 		{
-			get => _consumeTimingpowerUpTiming[Index];
-			set => _consumeTimingpowerUpTiming[Index] = value;
+			get => _powerUpTiming[Index];
+			set => _powerUpTiming[Index] = value;
 		}
 		public System.Int32 maxStacks
 		{
 			get => _maxStacks[Index];
 			set => _maxStacks.SetValue(this, value);
-		}
-		public System.String unerasableFlag
-		{
-			get => _unerasableFlag[Index];
-			set => _unerasableFlag[Index] = value;
 		}
 		public System.String buffType1
 		{
@@ -107,6 +102,16 @@ namespace Iono.MasterData
 		{
 			get => _valueModifierType1[Index];
 			set => _valueModifierType1[Index] = value;
+		}
+		public List<type> typeId
+		{
+			get => BGCodeGenUtils.MultipleRelationGet<type>(_typeId, Index);
+			set => BGCodeGenUtils.MultipleRelationSet<type>(_typeId, Index, value);
+		}
+		public System.Boolean unerasableFlag
+		{
+			get => _unerasableFlag[Index];
+			set => _unerasableFlag.SetValue(this, value);
 		}
 		private static BansheeGz.BGDatabase.BGFieldEntityName _ufle12jhs77_name;
 		public static BansheeGz.BGDatabase.BGFieldEntityName _name => _ufle12jhs77_name ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(MetaDefault, new BGId(4687238973632179271UL, 1864200036504196287UL), () => _ufle12jhs77_name = null);
@@ -130,12 +135,10 @@ namespace Iono.MasterData
 		public static BansheeGz.BGDatabase.BGFieldString _effectTarget => _ufle12jhs77_effectTarget ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5364245553622036372UL, 176893375286428336UL), () => _ufle12jhs77_effectTarget = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_consumeTiming;
 		public static BansheeGz.BGDatabase.BGFieldString _consumeTiming => _ufle12jhs77_consumeTiming ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5108606903378487452UL, 8212737381671945656UL), () => _ufle12jhs77_consumeTiming = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_consumeTimingpowerUpTiming;
-		public static BansheeGz.BGDatabase.BGFieldString _consumeTimingpowerUpTiming => _ufle12jhs77_consumeTimingpowerUpTiming ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5417264663178438202UL, 14927538864030012055UL), () => _ufle12jhs77_consumeTimingpowerUpTiming = null);
+		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_powerUpTiming;
+		public static BansheeGz.BGDatabase.BGFieldString _powerUpTiming => _ufle12jhs77_powerUpTiming ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5417264663178438202UL, 14927538864030012055UL), () => _ufle12jhs77_powerUpTiming = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_maxStacks;
 		public static BansheeGz.BGDatabase.BGFieldInt _maxStacks => _ufle12jhs77_maxStacks ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5070375692578368098UL, 9903950123912365490UL), () => _ufle12jhs77_maxStacks = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_unerasableFlag;
-		public static BansheeGz.BGDatabase.BGFieldString _unerasableFlag => _ufle12jhs77_unerasableFlag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5355490163620918454UL, 13024762937724184510UL), () => _ufle12jhs77_unerasableFlag = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_buffType1;
 		public static BansheeGz.BGDatabase.BGFieldString _buffType1 => _ufle12jhs77_buffType1 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5436221321068810921UL, 9593245426072740246UL), () => _ufle12jhs77_buffType1 = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_buffValue1;
@@ -144,8 +147,15 @@ namespace Iono.MasterData
 		public static BansheeGz.BGDatabase.BGFieldString _specialEffectTag1 => _ufle12jhs77_specialEffectTag1 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5740474805537465056UL, 11125338150783074699UL), () => _ufle12jhs77_specialEffectTag1 = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_valueModifierType1;
 		public static BansheeGz.BGDatabase.BGFieldString _valueModifierType1 => _ufle12jhs77_valueModifierType1 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(4617256288311391142UL, 8507679789460896139UL), () => _ufle12jhs77_valueModifierType1 = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationMultiple _ufle12jhs77_typeId;
+		public static BansheeGz.BGDatabase.BGFieldRelationMultiple _typeId => _ufle12jhs77_typeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationMultiple>(MetaDefault, new BGId(4920717210643321025UL, 3211686099010039174UL), () => _ufle12jhs77_typeId = null);
+		private static BansheeGz.BGDatabase.BGFieldBool _ufle12jhs77_unerasableFlag;
+		public static BansheeGz.BGDatabase.BGFieldBool _unerasableFlag => _ufle12jhs77_unerasableFlag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldBool>(MetaDefault, new BGId(5758501882099323519UL, 14829223627322287016UL), () => _ufle12jhs77_unerasableFlag = null);
+		public List<Iono.MasterData.skill> RelatedskillListUsingtargetBuffIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.skill>(Iono.MasterData.skill._targetBuffId, Id);
+		public List<Iono.MasterData.skill> RelatedskillListUsinguserBuffIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.skill>(Iono.MasterData.skill._userBuffId, Id);
+		public List<Iono.MasterData.inventory> RelatedinventoryListUsingbuffdebuffIDRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.inventory>(Iono.MasterData.inventory._buffdebuffID, Id);
 		private static BansheeGz.BGDatabase.BGKey _edeht3sdad33_buffKey;
-		public static BansheeGz.BGDatabase.BGKey _buffKey => _edeht3sdad33_buffKey ??= BGCodeGenUtils.GetKey(MetaDefault, new BGId(4861551469746589498UL, 16653765314310636965UL), () => _edeht3sdad33_buffKey = null);
+		public static BansheeGz.BGDatabase.BGKey _buffKey => _edeht3sdad33_buffKey ??= BGCodeGenUtils.GetKey(MetaDefault, new BGId(5701269069400636383UL, 4078363698253069977UL), () => _edeht3sdad33_buffKey = null);
 		private buffdebuff() : base(MetaDefault) {}
 		private buffdebuff(BGId id) : base(MetaDefault, id) {}
 		private buffdebuff(BGMetaEntity meta) : base(meta) {}
@@ -159,7 +169,13 @@ namespace Iono.MasterData
 		public static buffdebuff NewEntity() => (buffdebuff) MetaDefault.NewEntity();
 		public static buffdebuff NewEntity(BGId entityId) => (buffdebuff) MetaDefault.NewEntity(entityId);
 		public static buffdebuff NewEntity(Action<buffdebuff> callback) => (buffdebuff) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((buffdebuff)entity)));
-		public static buffdebuff GetEntityByKeybuffKey(System.String memo) => (buffdebuff) _buffKey.GetEntityByKey<System.String>(memo);
+		public void typeId_Add(type related) => BGCodeGenUtils.MultipleRelationAdd(_typeId, Index, related);
+		public void typeId_Remove(type related) => BGCodeGenUtils.MultipleRelationRemove(_typeId, Index, related);
+		public List<Iono.MasterData.skill> FillRelatedskillListUsingtargetBuffIdRelation(List<Iono.MasterData.skill> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.skill>(Iono.MasterData.skill._targetBuffId, Id, result);
+		public List<Iono.MasterData.skill> FillRelatedskillListUsinguserBuffIdRelation(List<Iono.MasterData.skill> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.skill>(Iono.MasterData.skill._userBuffId, Id, result);
+		public List<Iono.MasterData.inventory> FillRelatedinventoryListUsingbuffdebuffIDRelation(List<Iono.MasterData.inventory> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.inventory>(Iono.MasterData.inventory._buffdebuffID, Id, result);
+		public List<type> FilltypeId(List<type> result) => BGCodeGenUtils.MultipleRelationGet<type>(_typeId, Index, result);
+		public static buffdebuff GetEntityByKeybuffKey(System.String buffId) => (buffdebuff) _buffKey.GetEntityByKey<System.String>(buffId);
 		public static void InitializeCodeGenRuntime()
 		{
 			_metaDefault = BGCodeGenUtils.GetMeta<BansheeGz.BGDatabase.BGMetaRow>(new BGId(4699993827280895298UL,17438361447795262139UL), ReleaseCodeGenRuntime);
@@ -174,14 +190,15 @@ namespace Iono.MasterData
 			_ufle12jhs77_turnCount = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5082909908324151192UL, 11865525294893584787UL));
 			_ufle12jhs77_effectTarget = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5364245553622036372UL, 176893375286428336UL));
 			_ufle12jhs77_consumeTiming = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5108606903378487452UL, 8212737381671945656UL));
-			_ufle12jhs77_consumeTimingpowerUpTiming = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5417264663178438202UL, 14927538864030012055UL));
+			_ufle12jhs77_powerUpTiming = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5417264663178438202UL, 14927538864030012055UL));
 			_ufle12jhs77_maxStacks = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5070375692578368098UL, 9903950123912365490UL));
-			_ufle12jhs77_unerasableFlag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5355490163620918454UL, 13024762937724184510UL));
 			_ufle12jhs77_buffType1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5436221321068810921UL, 9593245426072740246UL));
 			_ufle12jhs77_buffValue1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5420376048428271068UL, 13682774272955766459UL));
 			_ufle12jhs77_specialEffectTag1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5740474805537465056UL, 11125338150783074699UL));
 			_ufle12jhs77_valueModifierType1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(4617256288311391142UL, 8507679789460896139UL));
-			_edeht3sdad33_buffKey = BGCodeGenUtils.GetKey(_metaDefault, new BGId(4861551469746589498UL, 16653765314310636965UL));
+			_ufle12jhs77_typeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationMultiple>(_metaDefault, new BGId(4920717210643321025UL, 3211686099010039174UL));
+			_ufle12jhs77_unerasableFlag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldBool>(_metaDefault, new BGId(5758501882099323519UL, 14829223627322287016UL));
+			_edeht3sdad33_buffKey = BGCodeGenUtils.GetKey(_metaDefault, new BGId(5701269069400636383UL, 4078363698253069977UL));
 		}
 		public static void ReleaseCodeGenRuntime()
 		{
@@ -197,13 +214,14 @@ namespace Iono.MasterData
 			_ufle12jhs77_turnCount = null;
 			_ufle12jhs77_effectTarget = null;
 			_ufle12jhs77_consumeTiming = null;
-			_ufle12jhs77_consumeTimingpowerUpTiming = null;
+			_ufle12jhs77_powerUpTiming = null;
 			_ufle12jhs77_maxStacks = null;
-			_ufle12jhs77_unerasableFlag = null;
 			_ufle12jhs77_buffType1 = null;
 			_ufle12jhs77_buffValue1 = null;
 			_ufle12jhs77_specialEffectTag1 = null;
 			_ufle12jhs77_valueModifierType1 = null;
+			_ufle12jhs77_typeId = null;
+			_ufle12jhs77_unerasableFlag = null;
 			_edeht3sdad33_buffKey = null;
 		}
 
@@ -228,13 +246,14 @@ namespace Iono.MasterData
 			public const string turnCount = "turnCount";
 			public const string effectTarget = "effectTarget";
 			public const string consumeTiming = "consumeTiming";
-			public const string consumeTimingpowerUpTiming = "consumeTimingpowerUpTiming";
+			public const string powerUpTiming = "powerUpTiming";
 			public const string maxStacks = "maxStacks";
-			public const string unerasableFlag = "unerasableFlag";
 			public const string buffType1 = "buffType1";
 			public const string buffValue1 = "buffValue1";
 			public const string specialEffectTag1 = "specialEffectTag1";
 			public const string valueModifierType1 = "valueModifierType1";
+			public const string typeId = "typeId";
+			public const string unerasableFlag = "unerasableFlag";
 			public const string buffKey = "buffKey";
 		}
 	}

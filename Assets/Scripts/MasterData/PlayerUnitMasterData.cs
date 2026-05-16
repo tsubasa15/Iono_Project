@@ -5,32 +5,7 @@ namespace Iono.Game.MasterData
 {
     public sealed class PlayerUnitMasterData
     {
-        public PlayerUnitMasterData(
-            string unitId,
-            string name,
-            string nameTextId,
-            string descTextId,
-            string memo,
-            string imageId,
-            string rarity,
-            string gender,
-            string typeId,
-            string passiveSkillId,
-            int skillCount,
-            IReadOnlyList<string> skillIds,
-            int maxLevel,
-            int hp,
-            int atk,
-            int def,
-            int spAtk,
-            int spDef,
-            int spd,
-            int resPoison,
-            int resSleep,
-            int resParalysis,
-            int resConfusion,
-            string tag1,
-            string tag2)
+        public PlayerUnitMasterData(string unitId, string name, string nameTextId, string descTextId, string memo, string imageId, string rarity, string gender, string typeId, string passiveSkillId, int skillCount, IReadOnlyList<string> skillIds, int maxLevel, int hp, int atk, int def, int spAtk, int spDef, int spd, int resPoison, int resSleep, int resParalysis, int resConfusion, string tag1, string tag2)
         {
             UnitId = unitId ?? string.Empty;
             Name = name ?? string.Empty;

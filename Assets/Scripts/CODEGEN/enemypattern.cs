@@ -28,45 +28,48 @@ namespace Iono.MasterData
 			get => _patternId[Index];
 			set => _patternId[Index] = value;
 		}
-		public System.String slotId1
+		public enemyslotdetail slotId_1
 		{
-			get => _slotId1[Index];
-			set => _slotId1[Index] = value;
+			get => (enemyslotdetail) _slotId_1[Index];
+			set => _slotId_1[Index] = value;
 		}
-		public System.String slotId2
+		public enemyslotdetail slotId_2
 		{
-			get => _slotId2[Index];
-			set => _slotId2[Index] = value;
+			get => (enemyslotdetail) _slotId_2[Index];
+			set => _slotId_2[Index] = value;
 		}
-		public System.String slotId3
+		public enemyslotdetail slotId_3
 		{
-			get => _slotId3[Index];
-			set => _slotId3[Index] = value;
+			get => (enemyslotdetail) _slotId_3[Index];
+			set => _slotId_3[Index] = value;
 		}
-		public System.String slotId4
+		public enemyslotdetail slotId_4
 		{
-			get => _slotId4[Index];
-			set => _slotId4[Index] = value;
+			get => (enemyslotdetail) _slotId_4[Index];
+			set => _slotId_4[Index] = value;
 		}
-		public System.String slotId5
+		public enemyslotdetail slotId_5
 		{
-			get => _slotId5[Index];
-			set => _slotId5[Index] = value;
+			get => (enemyslotdetail) _slotId_5[Index];
+			set => _slotId_5[Index] = value;
 		}
 		private static BansheeGz.BGDatabase.BGFieldEntityName _ufle12jhs77_name;
 		public static BansheeGz.BGDatabase.BGFieldEntityName _name => _ufle12jhs77_name ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(MetaDefault, new BGId(5054006690465944213UL, 2103289283230114220UL), () => _ufle12jhs77_name = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_patternId;
 		public static BansheeGz.BGDatabase.BGFieldString _patternId => _ufle12jhs77_patternId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5314139791351891301UL, 15433620926625559218UL), () => _ufle12jhs77_patternId = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_slotId1;
-		public static BansheeGz.BGDatabase.BGFieldString _slotId1 => _ufle12jhs77_slotId1 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5272197625053160738UL, 17810516003392331704UL), () => _ufle12jhs77_slotId1 = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_slotId2;
-		public static BansheeGz.BGDatabase.BGFieldString _slotId2 => _ufle12jhs77_slotId2 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5040336070638376137UL, 5048548399650703509UL), () => _ufle12jhs77_slotId2 = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_slotId3;
-		public static BansheeGz.BGDatabase.BGFieldString _slotId3 => _ufle12jhs77_slotId3 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5731315999852171632UL, 4576144661929661063UL), () => _ufle12jhs77_slotId3 = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_slotId4;
-		public static BansheeGz.BGDatabase.BGFieldString _slotId4 => _ufle12jhs77_slotId4 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5064265378050140278UL, 9849516237058494099UL), () => _ufle12jhs77_slotId4 = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_slotId5;
-		public static BansheeGz.BGDatabase.BGFieldString _slotId5 => _ufle12jhs77_slotId5 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5764521547746197863UL, 1808837541564457625UL), () => _ufle12jhs77_slotId5 = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_slotId_1;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _slotId_1 => _ufle12jhs77_slotId_1 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(4845496413181159889UL, 8192884728923098784UL), () => _ufle12jhs77_slotId_1 = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_slotId_2;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _slotId_2 => _ufle12jhs77_slotId_2 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5036480768525269577UL, 10073718330858388145UL), () => _ufle12jhs77_slotId_2 = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_slotId_3;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _slotId_3 => _ufle12jhs77_slotId_3 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5299643496424202406UL, 16644882907035634584UL), () => _ufle12jhs77_slotId_3 = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_slotId_4;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _slotId_4 => _ufle12jhs77_slotId_4 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5017287404188695285UL, 1480588218231687335UL), () => _ufle12jhs77_slotId_4 = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_slotId_5;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _slotId_5 => _ufle12jhs77_slotId_5 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5675230138247866535UL, 16428072515844839821UL), () => _ufle12jhs77_slotId_5 = null);
+		public List<Iono.MasterData.enemyunit> RelatedenemyunitListUsingpatternId1Relation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemyunit>(Iono.MasterData.enemyunit._patternId1, Id);
+		public List<Iono.MasterData.enemyunit> RelatedenemyunitListUsingpatternId2Relation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemyunit>(Iono.MasterData.enemyunit._patternId2, Id);
+		public List<Iono.MasterData.enemyunit> RelatedenemyunitListUsingpatternId3Relation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemyunit>(Iono.MasterData.enemyunit._patternId3, Id);
 		private static BansheeGz.BGDatabase.BGKey _edeht3sdad33_enemypatternKey;
 		public static BansheeGz.BGDatabase.BGKey _enemypatternKey => _edeht3sdad33_enemypatternKey ??= BGCodeGenUtils.GetKey(MetaDefault, new BGId(5140729650599859363UL, 8482042395841036928UL), () => _edeht3sdad33_enemypatternKey = null);
 		private enemypattern() : base(MetaDefault) {}
@@ -82,17 +85,20 @@ namespace Iono.MasterData
 		public static enemypattern NewEntity() => (enemypattern) MetaDefault.NewEntity();
 		public static enemypattern NewEntity(BGId entityId) => (enemypattern) MetaDefault.NewEntity(entityId);
 		public static enemypattern NewEntity(Action<enemypattern> callback) => (enemypattern) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((enemypattern)entity)));
+		public List<Iono.MasterData.enemyunit> FillRelatedenemyunitListUsingpatternId1Relation(List<Iono.MasterData.enemyunit> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemyunit>(Iono.MasterData.enemyunit._patternId1, Id, result);
+		public List<Iono.MasterData.enemyunit> FillRelatedenemyunitListUsingpatternId2Relation(List<Iono.MasterData.enemyunit> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemyunit>(Iono.MasterData.enemyunit._patternId2, Id, result);
+		public List<Iono.MasterData.enemyunit> FillRelatedenemyunitListUsingpatternId3Relation(List<Iono.MasterData.enemyunit> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.enemyunit>(Iono.MasterData.enemyunit._patternId3, Id, result);
 		public static enemypattern GetEntityByKeyenemypatternKey(System.String patternId) => (enemypattern) _enemypatternKey.GetEntityByKey<System.String>(patternId);
 		public static void InitializeCodeGenRuntime()
 		{
 			_metaDefault = BGCodeGenUtils.GetMeta<BansheeGz.BGDatabase.BGMetaRow>(new BGId(4683269916388146719UL,12783184638138125227UL), ReleaseCodeGenRuntime);
 			_ufle12jhs77_name = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(_metaDefault, new BGId(5054006690465944213UL, 2103289283230114220UL));
 			_ufle12jhs77_patternId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5314139791351891301UL, 15433620926625559218UL));
-			_ufle12jhs77_slotId1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5272197625053160738UL, 17810516003392331704UL));
-			_ufle12jhs77_slotId2 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5040336070638376137UL, 5048548399650703509UL));
-			_ufle12jhs77_slotId3 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5731315999852171632UL, 4576144661929661063UL));
-			_ufle12jhs77_slotId4 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5064265378050140278UL, 9849516237058494099UL));
-			_ufle12jhs77_slotId5 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5764521547746197863UL, 1808837541564457625UL));
+			_ufle12jhs77_slotId_1 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(4845496413181159889UL, 8192884728923098784UL));
+			_ufle12jhs77_slotId_2 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5036480768525269577UL, 10073718330858388145UL));
+			_ufle12jhs77_slotId_3 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5299643496424202406UL, 16644882907035634584UL));
+			_ufle12jhs77_slotId_4 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5017287404188695285UL, 1480588218231687335UL));
+			_ufle12jhs77_slotId_5 = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5675230138247866535UL, 16428072515844839821UL));
 			_edeht3sdad33_enemypatternKey = BGCodeGenUtils.GetKey(_metaDefault, new BGId(5140729650599859363UL, 8482042395841036928UL));
 		}
 		public static void ReleaseCodeGenRuntime()
@@ -100,11 +106,11 @@ namespace Iono.MasterData
 			_metaDefault = null;
 			_ufle12jhs77_name = null;
 			_ufle12jhs77_patternId = null;
-			_ufle12jhs77_slotId1 = null;
-			_ufle12jhs77_slotId2 = null;
-			_ufle12jhs77_slotId3 = null;
-			_ufle12jhs77_slotId4 = null;
-			_ufle12jhs77_slotId5 = null;
+			_ufle12jhs77_slotId_1 = null;
+			_ufle12jhs77_slotId_2 = null;
+			_ufle12jhs77_slotId_3 = null;
+			_ufle12jhs77_slotId_4 = null;
+			_ufle12jhs77_slotId_5 = null;
 			_edeht3sdad33_enemypatternKey = null;
 		}
 
@@ -120,11 +126,11 @@ namespace Iono.MasterData
 			public const string Meta = "enemypattern";
 			public const string name = "name";
 			public const string patternId = "patternId";
-			public const string slotId1 = "slotId1";
-			public const string slotId2 = "slotId2";
-			public const string slotId3 = "slotId3";
-			public const string slotId4 = "slotId4";
-			public const string slotId5 = "slotId5";
+			public const string slotId_1 = "slotId_1";
+			public const string slotId_2 = "slotId_2";
+			public const string slotId_3 = "slotId_3";
+			public const string slotId_4 = "slotId_4";
+			public const string slotId_5 = "slotId_5";
 			public const string enemypatternKey = "enemypatternKey";
 		}
 	}

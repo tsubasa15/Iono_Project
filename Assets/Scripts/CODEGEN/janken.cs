@@ -39,6 +39,7 @@ namespace Iono.MasterData
 		public static BansheeGz.BGDatabase.BGFieldString _jankenId => _ufle12jhs77_jankenId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5599729993875994831UL, 14932085452044104845UL), () => _ufle12jhs77_jankenId = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_resourceId;
 		public static BansheeGz.BGDatabase.BGFieldString _resourceId => _ufle12jhs77_resourceId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5043898762345761274UL, 3981162291070891158UL), () => _ufle12jhs77_resourceId = null);
+		public List<Iono.MasterData.skill> RelatedskillListUsingjankenIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.skill>(Iono.MasterData.skill._jankenId, Id);
 		private static BansheeGz.BGDatabase.BGKey _edeht3sdad33_jankenKey;
 		public static BansheeGz.BGDatabase.BGKey _jankenKey => _edeht3sdad33_jankenKey ??= BGCodeGenUtils.GetKey(MetaDefault, new BGId(4647064713443444640UL, 16705269008640686212UL), () => _edeht3sdad33_jankenKey = null);
 		private janken() : base(MetaDefault) {}
@@ -54,6 +55,7 @@ namespace Iono.MasterData
 		public static janken NewEntity() => (janken) MetaDefault.NewEntity();
 		public static janken NewEntity(BGId entityId) => (janken) MetaDefault.NewEntity(entityId);
 		public static janken NewEntity(Action<janken> callback) => (janken) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((janken)entity)));
+		public List<Iono.MasterData.skill> FillRelatedskillListUsingjankenIdRelation(List<Iono.MasterData.skill> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.skill>(Iono.MasterData.skill._jankenId, Id, result);
 		public static janken GetEntityByKeyjankenKey(System.String jankenId) => (janken) _jankenKey.GetEntityByKey<System.String>(jankenId);
 		public static void InitializeCodeGenRuntime()
 		{

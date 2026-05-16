@@ -102,6 +102,7 @@ namespace Iono.MasterData
 		public static BansheeGz.BGDatabase.BGFieldString _conditionValue3 => _ufle12jhs77_conditionValue3 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5230181024100881701UL, 1812998626494432909UL), () => _ufle12jhs77_conditionValue3 = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_damageCorrection3;
 		public static BansheeGz.BGDatabase.BGFieldInt _damageCorrection3 => _ufle12jhs77_damageCorrection3 ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5686110017848561673UL, 8043279970401796531UL), () => _ufle12jhs77_damageCorrection3 = null);
+		public List<Iono.MasterData.inventory> RelatedinventoryListUsingspEffectIdRelation => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.inventory>(Iono.MasterData.inventory._spEffectId, Id);
 		private static BansheeGz.BGDatabase.BGKey _edeht3sdad33_spEffectKey;
 		public static BansheeGz.BGDatabase.BGKey _spEffectKey => _edeht3sdad33_spEffectKey ??= BGCodeGenUtils.GetKey(MetaDefault, new BGId(5383954852498610357UL, 16536034631278992UL), () => _edeht3sdad33_spEffectKey = null);
 		private specialeffect() : base(MetaDefault) {}
@@ -117,6 +118,7 @@ namespace Iono.MasterData
 		public static specialeffect NewEntity() => (specialeffect) MetaDefault.NewEntity();
 		public static specialeffect NewEntity(BGId entityId) => (specialeffect) MetaDefault.NewEntity(entityId);
 		public static specialeffect NewEntity(Action<specialeffect> callback) => (specialeffect) MetaDefault.NewEntity(new BGMetaEntity.NewEntityContext(entity => callback((specialeffect)entity)));
+		public List<Iono.MasterData.inventory> FillRelatedinventoryListUsingspEffectIdRelation(List<Iono.MasterData.inventory> result) => BGCodeGenUtils.GetRelatedInbound<Iono.MasterData.inventory>(Iono.MasterData.inventory._spEffectId, Id, result);
 		public static specialeffect GetEntityByKeyspEffectKey(System.String spEffectId) => (specialeffect) _spEffectKey.GetEntityByKey<System.String>(spEffectId);
 		public static List<specialeffect> GetEntitiesByKeyspEffectKey(System.String spEffectId, List<specialeffect> result=null) => _spEffectKey.GetEntitiesByKey<specialeffect, System.String>(result, spEffectId);
 		public static void InitializeCodeGenRuntime()

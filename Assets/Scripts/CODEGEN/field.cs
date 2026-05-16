@@ -33,26 +33,6 @@ namespace Iono.MasterData
 			get => _memo[Index];
 			set => _memo[Index] = value;
 		}
-		public System.String plusDamageTypeId
-		{
-			get => _plusDamageTypeId[Index];
-			set => _plusDamageTypeId[Index] = value;
-		}
-		public System.String minusDamageTypeId
-		{
-			get => _minusDamageTypeId[Index];
-			set => _minusDamageTypeId[Index] = value;
-		}
-		public System.String negatedConditionId
-		{
-			get => _negatedConditionId[Index];
-			set => _negatedConditionId[Index] = value;
-		}
-		public System.String negatedSkillId
-		{
-			get => _negatedSkillId[Index];
-			set => _negatedSkillId[Index] = value;
-		}
 		public System.String preventOverwriteFlag
 		{
 			get => _preventOverwriteFlag[Index];
@@ -63,24 +43,72 @@ namespace Iono.MasterData
 			get => _duration[Index];
 			set => _duration.SetValue(this, value);
 		}
+		public System.Int32 healEndTurnRate
+		{
+			get => _healEndTurnRate[Index];
+			set => _healEndTurnRate.SetValue(this, value);
+		}
+		public System.Int32 plusDamageRate
+		{
+			get => _plusDamageRate[Index];
+			set => _plusDamageRate.SetValue(this, value);
+		}
+		public System.Int32 minusDamageRate
+		{
+			get => _minusDamageRate[Index];
+			set => _minusDamageRate.SetValue(this, value);
+		}
+		public type plusDamageTypeId
+		{
+			get => (type) _plusDamageTypeId[Index];
+			set => _plusDamageTypeId[Index] = value;
+		}
+		public type minusDamageTypeId
+		{
+			get => (type) _minusDamageTypeId[Index];
+			set => _minusDamageTypeId[Index] = value;
+		}
+		public skill negatedSkillId
+		{
+			get => (skill) _negatedSkillId[Index];
+			set => _negatedSkillId[Index] = value;
+		}
+		public System.Boolean preventPriorityFlag
+		{
+			get => _preventPriorityFlag[Index];
+			set => _preventPriorityFlag.SetValue(this, value);
+		}
+		public abnormalcondition negatedConditionId
+		{
+			get => (abnormalcondition) _negatedConditionId[Index];
+			set => _negatedConditionId[Index] = value;
+		}
 		private static BansheeGz.BGDatabase.BGFieldEntityName _ufle12jhs77_name;
 		public static BansheeGz.BGDatabase.BGFieldEntityName _name => _ufle12jhs77_name ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(MetaDefault, new BGId(5064983754645516911UL, 7615715515282199704UL), () => _ufle12jhs77_name = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_fieldId;
 		public static BansheeGz.BGDatabase.BGFieldString _fieldId => _ufle12jhs77_fieldId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5052992277415422418UL, 13989648592115498923UL), () => _ufle12jhs77_fieldId = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_memo;
 		public static BansheeGz.BGDatabase.BGFieldString _memo => _ufle12jhs77_memo ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5396161896030477841UL, 17183565430326180017UL), () => _ufle12jhs77_memo = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_plusDamageTypeId;
-		public static BansheeGz.BGDatabase.BGFieldString _plusDamageTypeId => _ufle12jhs77_plusDamageTypeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5192876126242017639UL, 16900935842798689932UL), () => _ufle12jhs77_plusDamageTypeId = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_minusDamageTypeId;
-		public static BansheeGz.BGDatabase.BGFieldString _minusDamageTypeId => _ufle12jhs77_minusDamageTypeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5721496626656676793UL, 15693232338203896969UL), () => _ufle12jhs77_minusDamageTypeId = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_negatedConditionId;
-		public static BansheeGz.BGDatabase.BGFieldString _negatedConditionId => _ufle12jhs77_negatedConditionId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5408034119613086503UL, 12220940617777041084UL), () => _ufle12jhs77_negatedConditionId = null);
-		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_negatedSkillId;
-		public static BansheeGz.BGDatabase.BGFieldString _negatedSkillId => _ufle12jhs77_negatedSkillId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5458620187246986708UL, 5487780890473992082UL), () => _ufle12jhs77_negatedSkillId = null);
 		private static BansheeGz.BGDatabase.BGFieldString _ufle12jhs77_preventOverwriteFlag;
 		public static BansheeGz.BGDatabase.BGFieldString _preventOverwriteFlag => _ufle12jhs77_preventOverwriteFlag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(MetaDefault, new BGId(5559669755363994355UL, 2321956138862408629UL), () => _ufle12jhs77_preventOverwriteFlag = null);
 		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_duration;
 		public static BansheeGz.BGDatabase.BGFieldInt _duration => _ufle12jhs77_duration ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4881380040841939859UL, 2582038382285249197UL), () => _ufle12jhs77_duration = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_healEndTurnRate;
+		public static BansheeGz.BGDatabase.BGFieldInt _healEndTurnRate => _ufle12jhs77_healEndTurnRate ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5373650712912618957UL, 16425804466937573558UL), () => _ufle12jhs77_healEndTurnRate = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_plusDamageRate;
+		public static BansheeGz.BGDatabase.BGFieldInt _plusDamageRate => _ufle12jhs77_plusDamageRate ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(4839448979604091462UL, 7636501102453398691UL), () => _ufle12jhs77_plusDamageRate = null);
+		private static BansheeGz.BGDatabase.BGFieldInt _ufle12jhs77_minusDamageRate;
+		public static BansheeGz.BGDatabase.BGFieldInt _minusDamageRate => _ufle12jhs77_minusDamageRate ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(MetaDefault, new BGId(5104399102913584921UL, 17592322940615614619UL), () => _ufle12jhs77_minusDamageRate = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_plusDamageTypeId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _plusDamageTypeId => _ufle12jhs77_plusDamageTypeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5425455208129366930UL, 2200675816792832447UL), () => _ufle12jhs77_plusDamageTypeId = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_minusDamageTypeId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _minusDamageTypeId => _ufle12jhs77_minusDamageTypeId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5104544541372448170UL, 15471963993653893295UL), () => _ufle12jhs77_minusDamageTypeId = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_negatedSkillId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _negatedSkillId => _ufle12jhs77_negatedSkillId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5081710980470368000UL, 7259061907990057887UL), () => _ufle12jhs77_negatedSkillId = null);
+		private static BansheeGz.BGDatabase.BGFieldBool _ufle12jhs77_preventPriorityFlag;
+		public static BansheeGz.BGDatabase.BGFieldBool _preventPriorityFlag => _ufle12jhs77_preventPriorityFlag ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldBool>(MetaDefault, new BGId(5468148211208613571UL, 4972767562889941896UL), () => _ufle12jhs77_preventPriorityFlag = null);
+		private static BansheeGz.BGDatabase.BGFieldRelationSingle _ufle12jhs77_negatedConditionId;
+		public static BansheeGz.BGDatabase.BGFieldRelationSingle _negatedConditionId => _ufle12jhs77_negatedConditionId ??= BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(MetaDefault, new BGId(5744027725360184067UL, 4093649725294174127UL), () => _ufle12jhs77_negatedConditionId = null);
 		private static BansheeGz.BGDatabase.BGKey _edeht3sdad33_fieldKey;
 		public static BansheeGz.BGDatabase.BGKey _fieldKey => _edeht3sdad33_fieldKey ??= BGCodeGenUtils.GetKey(MetaDefault, new BGId(4957815438075259119UL, 4844997023473008270UL), () => _edeht3sdad33_fieldKey = null);
 		private field() : base(MetaDefault) {}
@@ -103,12 +131,16 @@ namespace Iono.MasterData
 			_ufle12jhs77_name = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldEntityName>(_metaDefault, new BGId(5064983754645516911UL, 7615715515282199704UL));
 			_ufle12jhs77_fieldId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5052992277415422418UL, 13989648592115498923UL));
 			_ufle12jhs77_memo = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5396161896030477841UL, 17183565430326180017UL));
-			_ufle12jhs77_plusDamageTypeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5192876126242017639UL, 16900935842798689932UL));
-			_ufle12jhs77_minusDamageTypeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5721496626656676793UL, 15693232338203896969UL));
-			_ufle12jhs77_negatedConditionId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5408034119613086503UL, 12220940617777041084UL));
-			_ufle12jhs77_negatedSkillId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5458620187246986708UL, 5487780890473992082UL));
 			_ufle12jhs77_preventOverwriteFlag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldString>(_metaDefault, new BGId(5559669755363994355UL, 2321956138862408629UL));
 			_ufle12jhs77_duration = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4881380040841939859UL, 2582038382285249197UL));
+			_ufle12jhs77_healEndTurnRate = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5373650712912618957UL, 16425804466937573558UL));
+			_ufle12jhs77_plusDamageRate = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(4839448979604091462UL, 7636501102453398691UL));
+			_ufle12jhs77_minusDamageRate = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldInt>(_metaDefault, new BGId(5104399102913584921UL, 17592322940615614619UL));
+			_ufle12jhs77_plusDamageTypeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5425455208129366930UL, 2200675816792832447UL));
+			_ufle12jhs77_minusDamageTypeId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5104544541372448170UL, 15471963993653893295UL));
+			_ufle12jhs77_negatedSkillId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5081710980470368000UL, 7259061907990057887UL));
+			_ufle12jhs77_preventPriorityFlag = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldBool>(_metaDefault, new BGId(5468148211208613571UL, 4972767562889941896UL));
+			_ufle12jhs77_negatedConditionId = BGCodeGenUtils.GetField<BansheeGz.BGDatabase.BGFieldRelationSingle>(_metaDefault, new BGId(5744027725360184067UL, 4093649725294174127UL));
 			_edeht3sdad33_fieldKey = BGCodeGenUtils.GetKey(_metaDefault, new BGId(4957815438075259119UL, 4844997023473008270UL));
 		}
 		public static void ReleaseCodeGenRuntime()
@@ -117,12 +149,16 @@ namespace Iono.MasterData
 			_ufle12jhs77_name = null;
 			_ufle12jhs77_fieldId = null;
 			_ufle12jhs77_memo = null;
-			_ufle12jhs77_plusDamageTypeId = null;
-			_ufle12jhs77_minusDamageTypeId = null;
-			_ufle12jhs77_negatedConditionId = null;
-			_ufle12jhs77_negatedSkillId = null;
 			_ufle12jhs77_preventOverwriteFlag = null;
 			_ufle12jhs77_duration = null;
+			_ufle12jhs77_healEndTurnRate = null;
+			_ufle12jhs77_plusDamageRate = null;
+			_ufle12jhs77_minusDamageRate = null;
+			_ufle12jhs77_plusDamageTypeId = null;
+			_ufle12jhs77_minusDamageTypeId = null;
+			_ufle12jhs77_negatedSkillId = null;
+			_ufle12jhs77_preventPriorityFlag = null;
+			_ufle12jhs77_negatedConditionId = null;
 			_edeht3sdad33_fieldKey = null;
 		}
 
@@ -139,12 +175,16 @@ namespace Iono.MasterData
 			public const string name = "name";
 			public const string fieldId = "fieldId";
 			public const string memo = "memo";
-			public const string plusDamageTypeId = "plusDamageTypeId";
-			public const string minusDamageTypeId = "minusDamageTypeId";
-			public const string negatedConditionId = "negatedConditionId";
-			public const string negatedSkillId = "negatedSkillId";
 			public const string preventOverwriteFlag = "preventOverwriteFlag";
 			public const string duration = "duration";
+			public const string healEndTurnRate = "healEndTurnRate";
+			public const string plusDamageRate = "plusDamageRate";
+			public const string minusDamageRate = "minusDamageRate";
+			public const string plusDamageTypeId = "plusDamageTypeId";
+			public const string minusDamageTypeId = "minusDamageTypeId";
+			public const string negatedSkillId = "negatedSkillId";
+			public const string preventPriorityFlag = "preventPriorityFlag";
+			public const string negatedConditionId = "negatedConditionId";
 			public const string fieldKey = "fieldKey";
 		}
 	}
